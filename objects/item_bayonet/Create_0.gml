@@ -6,5 +6,5 @@
 event_inherited();
 
 name = "Bayonet"
-description = "Attachment for musket."
+description = "Enables thrust attack for Main Weapon. And reloading does damage."
 image_index = 4;

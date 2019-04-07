@@ -6,7 +6,7 @@ if (collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_solid,1
 	var xx = x+lengthdir_x(spd,dir)/2;
 	var yy = y+lengthdir_y(spd,dir)/2;
 	instance_create_depth(xx,yy,-55,obj_bullet_hit);
-	instance_destroy();
+	instance_destroy(self,false);
 }
 if (lastDir != dir){image_angle = dir;lastDir = dir}
 

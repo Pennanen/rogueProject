@@ -4,7 +4,6 @@
 grav = 1;
 
 vSpd = 0;
-vSpdMax = 30;
 
 baseSpdMax = 5;
 hSpd = 0;

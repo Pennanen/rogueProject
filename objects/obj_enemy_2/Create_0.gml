@@ -11,7 +11,12 @@ awake = false;
 stabbed = false;
 hAcc = 0.3;
 canImpale = true;
+spinDir = 0;
+mass = 1.5;
+spriteIndex = spr_spinner;
+imageIndex = 0;
+onGround = false;
+
 damage = 1;
 knockback = 15;
-mass = 1;
 depth = -5;

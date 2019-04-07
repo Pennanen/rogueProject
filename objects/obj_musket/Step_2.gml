@@ -32,8 +32,9 @@ if (reloading)
 		inst = instance_place(x,y,obj_enemy_1);
 		if (instance_exists(inst))
 			{
-			var hitDire = point_direction(x,y,inst.x,inst.y-30);
-			var hitForce = 10;
+			if (BAYONET){inst.hp-=bayonetDmg};
+			var hitDire = point_direction(x,y,inst.x,inst.y-40);
+			var hitForce = 25/inst.mass;
 			inst.hSpd += lengthdir_x(hitForce,hitDire);
 			inst.vSpd += lengthdir_y(hitForce,hitDire);
 			}

@@ -6,13 +6,14 @@ reloadSpd = 0;
 stabbing = false;
 stabForce = 17;
 canStab = true;
-stabDamage = 1;
+
 stabDir = 0;
 canStabDamage = false;
 stabCooldownSteps = 60;
 
-firerate = 14;
-barrels = 1;
+stabDamage = 1;
+bayonetDmg = 0.5;//damage on reloading with bayonet
+
 canFire = true;
 dir = 0;
 image_yscale = 2;
