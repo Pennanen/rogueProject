@@ -2,7 +2,7 @@
 /*
 */
 
-targetx = room_width/2+(obj_player.x-room_width/2)/2;
+targetx = room_width/2+(obj_player.x-room_width/2)/1.6;
 if (obj_player.y > 0 && obj_player.y < room_height)
 	{
 	targety = room_height/2+(obj_player.y-room_height/2)/2;
