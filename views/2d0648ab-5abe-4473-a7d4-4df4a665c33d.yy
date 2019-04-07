@@ -1,0 +1,16 @@
+{
+    "id": "2d0648ab-5abe-4473-a7d4-4df4a665c33d",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "2d0648ab-5abe-4473-a7d4-4df4a665c33d",
+    "children": [
+        "79a1d900-a3cb-423f-bde7-25275c31f5d0",
+        "7a4f4b93-f42e-4a02-8731-1c4ef9c572d3",
+        "728dd17c-80c4-4239-885e-7c8f21c80f91",
+        "b3e0c5ac-cb4f-456a-9620-a11903dc861d"
+    ],
+    "filterType": "GMScript",
+    "folderName": "scripts",
+    "isDefaultView": false,
+    "localisedFolderName": "ResourceTree_Scripts"
+}

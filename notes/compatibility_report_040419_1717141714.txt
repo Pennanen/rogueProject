@@ -1,0 +1,29 @@
+Converting GML script: ${project_dir}\objects\objControl\Create_0.gml
+Converted builtin - line 10: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 16: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 24: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 10: view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 16: view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 25: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted description /// @description Randomize
+
+Converting GML script: ${project_dir}\objects\objControl\Step_0.gml
+Converted builtin - line 8: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 14: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 8: view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 14: view_hview -> __view_get( e__VW.HView, 0 )
+Converted description /// @description Press "F" for Fullscreen Toggle
+
+Converting GML script: ${project_dir}\objects\objControl\Keyboard_27.gml
+Converted description /// @description Game End
+
+Converting GML script: ${project_dir}\objects\objControl\Draw_77.gml
+Converted builtin - line 2: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+Converted description /// @description Draw Interpolation
+
+Added compatibility script 'draw/draw_enable_alphablend.gml'
+Added compatibility script 'texture/texture_set_interpolation.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
