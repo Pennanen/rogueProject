@@ -1,6 +1,7 @@
-/// @description
+/// @description reload end
 /*
 */
+
 if (reloadIndex < 11)
 	{
 	reloadIndex++;	
@@ -10,4 +11,6 @@ if (reloadIndex < 11)
 	{
 	canFire = true;
 	reloadIndex = 0;
+	shotsAvailable = musketSHOTS;
 	}
+

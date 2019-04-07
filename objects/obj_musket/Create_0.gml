@@ -15,9 +15,10 @@ stabCooldownSteps = 60;
 
 stabDamage = 1;
 bayonetDmg = 0.5;//damage on reloading with bayonet
-
+shotsAvailable = musketSHOTS;
 canFire = true;
 dir = 0;
+kick = false;
 image_yscale = 2;
 image_xscale = 2;
 reloadDir = 0;

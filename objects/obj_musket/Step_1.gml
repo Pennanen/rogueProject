@@ -11,7 +11,7 @@ if (side = 2)
 	dir=dir+180;
 	}
 image_angle = dir;
-if (!reloading && canFire && reloadDir = 0)
+if (!reloading && canFire && reloadDir = 0 && !kick)
 {
 side = obj_player.image_xscale*2;
 

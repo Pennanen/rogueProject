@@ -22,8 +22,10 @@ y = obj_player.y;
 }
 else
 {
-x += ((obj_player.x+side*7)-x)*0.4;
-y = obj_player.y;
+var	kickPowerx = lengthdir_x(reloadSpd*-0.5*side/2,dir);
+var	kickPowery = -abs(lengthdir_y(reloadSpd*-2*side/2,dir));
+x += ((obj_player.x+side*7)-x)*0.4+kickPowerx;
+y = obj_player.y+kickPowery;
 }
 if (reloading)
 	{
@@ -40,10 +42,17 @@ if (reloading)
 			}
 			
 		}
-	if (reloadSpd < 22)reloadSpd+=4;
-	if (reloadDir > 390){alarm[0] = 1;reloading = false;reloadIndex++;}
+	if (reloadSpd < 15)reloadSpd+=3;
+	if (reloadDir > 360){alarm[0] = 1;reloading = false;reloadIndex++;}
 	if (reloadIndex < 5){reloadIndex+=0.5}
 	}
+else if (kick)
+	{
+	if (reloadSpd < 15)reloadSpd+=2;
+	if (reloadDir > 370){alarm[3] = 1;kick=false;reloadIndex++;}
+	if (reloadIndex < 2){reloadIndex+=1}
+	}
+	
 reloadDir+=reloadSpd;
 if (canFire)
 	{
@@ -56,6 +65,7 @@ if (canFire)
 	else
 	{
 	if (!reloading){if (reloadDir > 360) {reloadDir+=(360-reloadDir)*0.1}}
+	else if (!reloading && !kick && reloadIndex <= 4){if (reloadDir > 0) {reloadDir+=(0-reloadDir)*0.1}}
 	if (BAYONET){sprite_index = spr_musket_reloading_bayonet;}else{sprite_index = spr_musket_reloading;}
 	image_index = reloadIndex;
 	}
