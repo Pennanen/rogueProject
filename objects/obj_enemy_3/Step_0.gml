@@ -9,7 +9,6 @@ var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffs
 var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
 var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index);
 //Behaviour
-if (!awake && obj_player.y > y-32){awake = true;}
 if (awake && !stabbed)
 {
 if (obj_player.x > x && hSpd < hSpdMax){hSpd += hAcc}

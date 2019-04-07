@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-spd = 21;
+spd = 15+bulletSPEED*2;
 dir = 0;
 lastDir = 0;
 image_xscale = 1;

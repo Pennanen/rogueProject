@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+knockback = musketKNOCKBACK;
+
 reloading = false;
 reloadSpd = 0;
 stabbing = false;

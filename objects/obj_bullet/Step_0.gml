@@ -14,8 +14,8 @@ if (lastDir != dir){image_angle = dir;lastDir = dir}
 //dir = lerp(dir,270,0.1);
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
-spd*=1.11;
-image_xscale = 2+spd/120;
-if (image_yscale < 3) image_yscale +=0.3;
+spd*=1.01+0.01*bulletSPEED;
+image_xscale = 2+spd*0.001;
+image_yscale = 0.5+playerDAMAGE/10;
 
 //image_angle = point_direction(xprevious,yprevious,x,y);

@@ -20,4 +20,10 @@ onGround = false;
 damage = 1;
 knockback = 15;
 scale = 2;
-depth = -5;
+depth = -59;
+
+rarity = 2;
+hpAlpha = 0;
+HpAlphaIncrement = 0.05;
+awakeTime = 30; // smaller than 10 leaves hpAlpha too low
+awakening = false;

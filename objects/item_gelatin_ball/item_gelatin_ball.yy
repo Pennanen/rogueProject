@@ -2,7 +2,7 @@
     "id": "d77ca8f6-64dc-4739-b657-278c81f78326",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "item_green_stuff",
+    "name": "item_gelatin_ball",
     "eventList": [
         {
             "id": "fa9d9be5-ffcb-4b4b-8258-7265491d8a5a",

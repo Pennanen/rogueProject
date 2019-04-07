@@ -5,6 +5,6 @@
 // Inherit the parent event
 event_inherited();
 
-name = "Green Stuff"
-description = "Glob glob."
+name = "Gelatin Ball"
+description = "Damage +1, Max HP +1"
 image_index = 3;

@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-grav = 1;
+grav = 0.7;
 
 vSpd = 0;
 
@@ -11,7 +11,8 @@ hSpdMax = baseSpdMax+playerSPEED;
 
 maxDamp = 0.8;
 hAcc = 1.25;
-jumpSpd = 17;
+jumpSpd = 20;
+doubleJumped = false;
 
 aDamp = 0.2;
 gDamp = 0.8;

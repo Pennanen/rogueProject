@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0678d3a8-56db-4380-858a-4c34d43cba3d",
+            "Value": {
+                "id": "8a6cc2a2-4de2-48c7-952c-6d33e3cce6ab",
+                "resourcePath": "scripts\\loot\\loot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "07bacd02-c14d-40dc-9a5b-3e619fad4793",
             "Value": {
                 "id": "e905e60c-154c-4f77-b169-64b924114d55",
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "86b8bab9-4eb4-4b2b-9793-5959d79c4fc5",
+            "Value": {
+                "id": "d81e4f43-09a6-4150-8c41-4b727cbcdcce",
+                "resourcePath": "rooms\\room4_shop\\room4_shop.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "87752d8f-21b0-4a6b-b981-c3bd98f75aa4",
             "Value": {
                 "id": "17ff1127-bdc3-457b-adf0-f2b7a1119af9",
@@ -495,6 +511,14 @@
             }
         },
         {
+            "Key": "ace4912f-4eb0-44f9-bfa4-99d882627117",
+            "Value": {
+                "id": "9051b680-d2d8-45f0-9467-0b3151c35ad2",
+                "resourcePath": "objects\\item_gelatin_cube\\item_gelatin_cube.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "afc90d91-277a-47b7-896d-e6c7c9fa1fcc",
             "Value": {
                 "id": "6ef0c7ab-e6cc-45d9-a9b5-4a20271f4cfd",
@@ -563,6 +587,14 @@
             "Value": {
                 "id": "9fe68c55-80e9-4a04-aec5-412e55a243c7",
                 "resourcePath": "objects\\obj_upgrade_screen\\obj_upgrade_screen.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "be9fa154-868a-4dde-90cd-4ff64a01d1c1",
+            "Value": {
+                "id": "966e9369-9a5f-4f07-947a-4d78d6aa5e07",
+                "resourcePath": "objects\\item_gunpowder\\item_gunpowder.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -690,7 +722,7 @@
             "Key": "d77ca8f6-64dc-4739-b657-278c81f78326",
             "Value": {
                 "id": "166138e3-a50b-413d-81cc-7b34b2b1c358",
-                "resourcePath": "objects\\item_green_stuff\\item_green_stuff.yy",
+                "resourcePath": "objects\\item_gelatin_ball\\item_gelatin_ball.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -791,6 +823,14 @@
             }
         },
         {
+            "Key": "fc3e4dae-6723-4659-b057-7553ed0d9db8",
+            "Value": {
+                "id": "549e2dba-d4d3-4245-bf04-91af9202fb1e",
+                "resourcePath": "sprites\\spr_musket_reloading_knockback\\spr_musket_reloading_knockback.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fcdd036b-fc04-48b7-81ce-8743e1c83202",
             "Value": {
                 "id": "11054b04-7c18-4df4-acfa-7afe9b10151e",
@@ -807,7 +847,8 @@
         "02b7c3b3-785a-4c48-a4f7-ee2f15daad6e",
         "c31ea2f2-7ae1-443d-b8ab-b303db6bd836",
         "728dd17c-80c4-4239-885e-7c8f21c80f91",
-        "b3e0c5ac-cb4f-456a-9620-a11903dc861d"
+        "b3e0c5ac-cb4f-456a-9620-a11903dc861d",
+        "0678d3a8-56db-4380-858a-4c34d43cba3d"
     ],
     "tutorial": ""
 }

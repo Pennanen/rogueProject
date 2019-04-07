@@ -12,6 +12,6 @@ if (canFire && y > 0 && y < room_height && reloadDir = 0)
 	canFire = false;
 	reloading = true;
 	recoverSpd = -5;
-	obj_player.hSpd += lengthdir_x(-12,bullet.dir);
-	obj_player.vSpd += lengthdir_y(-12,bullet.dir);
+	obj_player.hSpd += lengthdir_x(-knockback,bullet.dir);
+	obj_player.vSpd += lengthdir_y(-knockback,bullet.dir);
 	}
