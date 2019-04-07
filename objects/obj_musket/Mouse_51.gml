@@ -15,5 +15,6 @@ if (canStab && y > 0 && y < room_height && reloadDir = 0)
 	canStab = false;
 	stabDir = point_direction(x,y,mouse_x,mouse_y);
 	stabbing = true;
+	audio_play_sound(snd_stab,0,0);
 	}
 }

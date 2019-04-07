@@ -5,7 +5,7 @@ depth = -400;
 
 globalvar playerHP, playerMAXHP, playerDAMAGE,playerSPEED;
 // HP
-playerMAXHP = 5;
+playerMAXHP = 4;
 playerHP = playerMAXHP;
 canHurt = true;
 hurtTime = 60;
@@ -18,7 +18,7 @@ playerSPEED = 1;
 // BAYONET Upgrade
 globalvar BAYONET,musketKNOCKBACK,bulletSPEED,musketSHOTS;
 BAYONET = false;
-musketSHOTS = 1;
+musketSHOTS = 4;
 musketKNOCKBACK = 5;
 bulletSPEED = 0;
 globalvar playerDOUBLEJUMP;
