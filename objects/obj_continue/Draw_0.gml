@@ -12,5 +12,6 @@ if (stronger = true)
 	{
 	draw_text(x,y*0.7-400,"Enemies are growing stronger...");
 	}
-	draw_text(x,y-12-hovery,"OK");
+	draw_set_valign(fa_center);
+	draw_text(x,y-hovery,"OK");
 draw_set_alpha(1);

@@ -3,10 +3,10 @@
 */
 index = 0;
 image_speed = 0;
-image_xscale = 1.5;
-image_yscale = 1.5;
+image_xscale = 1.25;
+image_yscale = 1.25;
 image_alpha = 0;
-vSpd = 25;
+vSpd = 33;
 hover = false;
 hovery = 0;
 ready = false;

@@ -2,12 +2,13 @@
 /*
 */
 FLOOR++;
-	
+
 if (room != room_start)
 	{
 	obj_player.y = topLine;
 	obj_player.playerPause = true;
 	setCamPos(obj_player.x,obj_player.y);
+
 	alarm[0] = 15;
 	}
 	else
@@ -23,3 +24,12 @@ if (global.wastedDiamonds > 0)
 		}
 	global.wastedDiamonds = 0;
 	}
+	
+//Section musics
+switch(FLOOR)
+	{
+	case 10: sectionMusic = music;break;
+	case 20: sectionMusic = music;break;
+	//....
+	}
+	

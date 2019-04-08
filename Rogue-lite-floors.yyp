@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "8de72510-e8b7-4cfc-8e0a-16426642f387",
+            "Value": {
+                "id": "3f935127-9719-4c58-ad66-fbddd2207c60",
+                "resourcePath": "sounds\\msc_between\\msc_between.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8ed747a9-82d0-4f95-9051-3e3d54614fa0",
             "Value": {
                 "id": "264dfdd3-2fc6-4f0c-9a6f-95c92b2c4b30",
@@ -532,6 +540,14 @@
                 "id": "f345e820-991f-471e-b44b-4a7eb7664fe7",
                 "resourcePath": "views\\91811a01-aacd-4fe3-9722-a4065f76f028.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "930c5ba7-76a5-4b74-9d63-009c71c935ab",
+            "Value": {
+                "id": "bb93f80d-5900-4101-ada2-d3c5f54618ea",
+                "resourcePath": "objects\\obj_change_music\\obj_change_music.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -604,6 +620,14 @@
                 "id": "9051b680-d2d8-45f0-9467-0b3151c35ad2",
                 "resourcePath": "objects\\item_gelatin_cube\\item_gelatin_cube.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "af225216-a72a-4764-913c-20b514aa6ef3",
+            "Value": {
+                "id": "5b14eedb-9f2d-4ac6-bf17-e0fa0ff544fa",
+                "resourcePath": "scripts\\changeMusic\\changeMusic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -960,7 +984,8 @@
         "c31ea2f2-7ae1-443d-b8ab-b303db6bd836",
         "728dd17c-80c4-4239-885e-7c8f21c80f91",
         "b3e0c5ac-cb4f-456a-9620-a11903dc861d",
-        "0678d3a8-56db-4380-858a-4c34d43cba3d"
+        "0678d3a8-56db-4380-858a-4c34d43cba3d",
+        "af225216-a72a-4764-913c-20b514aa6ef3"
     ],
     "tutorial": ""
 }
