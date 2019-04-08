@@ -18,8 +18,8 @@ playerSPEED = 1;
 // BAYONET Upgrade
 globalvar BAYONET,musketKNOCKBACK,bulletSPEED,musketSHOTS;
 BAYONET = false;
-musketSHOTS = 4;
+musketSHOTS = 1;
 musketKNOCKBACK = 5;
-bulletSPEED = 0;
+bulletSPEED = 1;
 globalvar playerDOUBLEJUMP;
 playerDOUBLEJUMP = false;

@@ -19,7 +19,7 @@ if (global.wastedDiamonds > 0)
 	{
 	repeat(global.wastedDiamonds)
 		{
-		instance_create_depth(obj_player.x,32,0,obj_diamond);
+		instance_create_depth(obj_player.x,64,0,obj_diamond);
 		}
 	global.wastedDiamonds = 0;
 	}

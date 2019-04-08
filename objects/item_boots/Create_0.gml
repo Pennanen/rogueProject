@@ -5,6 +5,6 @@
 // Inherit the parent event
 event_inherited();
 
-name = "Boots"
+name = "Brown Boots"
 description = "Hipity hop!"
 image_index = 5;

@@ -6,5 +6,5 @@
 event_inherited();
 
 name = "Gelatin Cube"
-description = "Speed +1, Max HP +1"
+description = "Speed +1, Heals full on pickup."
 image_index = 6;

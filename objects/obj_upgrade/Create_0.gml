@@ -11,11 +11,18 @@ hover = false;
 hovery = 0;
 typeText = "";
 item = noone;
-if (ds_list_size(obj_item_handler.itemPool)>0)
+
+rarity = irandom(99);
+
+if (rarity < 5 && ds_list_size(obj_item_handler.uRarePool)>0){currentPool = obj_item_handler.uRarePool}
+else if (rarity < 30 && ds_list_size(obj_item_handler.rarePool)>0){currentPool = obj_item_handler.rarePool}
+else {currentPool = obj_item_handler.commonPool}
+
+if (ds_list_size(currentPool)>0)
 {
-itemId = ds_list_find_value(obj_item_handler.itemPool,0);
+itemId = ds_list_find_value(currentPool,0);
 item = instance_create_depth(x,y,depth-1,itemId);
-ds_list_delete(obj_item_handler.itemPool,0);
+ds_list_delete(currentPool,0);
 typeText = item.name;
 }
 if (item = noone){instance_destroy()};
