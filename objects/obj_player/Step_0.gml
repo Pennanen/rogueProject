@@ -35,12 +35,12 @@ else // Player not paused
 	//Movement
 	if (keyLeft && !keyRight && hSpd > -hSpdMax){hSpd -= hAcc;image_xscale = -1}
 	if (keyRight && !keyLeft && hSpd < hSpdMax){hSpd += hAcc;image_xscale = 1}
-	if (keyUp && onGround ){vSpd = -jumpSpd;}
-
+	if (keyUp && onGround){vSpd -= jumpSpd;}
+	if (keyUp && jumpSave > 1){vSpd -= jumpSpd;jumpSave = 1}
 	
 	// Variable jump and gravity control
-	if (keyUp && vSpd < 0 && !onGround){}
-	else if (vSpd < 0 && !onGround){vSpd/=1.1}
+	if (keyUpHold && vSpd < 0 && !onGround){}
+	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
 	vSpd+=grav;
 	// Collision

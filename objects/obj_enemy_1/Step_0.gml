@@ -27,7 +27,7 @@ if (stabbed)
 		}
 		else
 		{
-		var len = 30/mass;
+		var len = obj_musket.stabForce/mass;
 		var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
 		hSpd = obj_musket.x+lengthdir_x(len*1.5,dir);
 		vSpd = obj_musket.y+lengthdir_y(len,dir);

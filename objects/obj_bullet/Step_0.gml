@@ -15,7 +15,7 @@ if (lastDir != dir){image_angle = dir;lastDir = dir}
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
 spd*=1.01+0.01*bulletSPEED;
-image_xscale = 2+spd*0.001;
-image_yscale = 0.5+playerDAMAGE/10;
+image_xscale = 1.5+spd*0.002;
+image_yscale = 0.5+playerDAMAGE/7;
 
 //image_angle = point_direction(xprevious,yprevious,x,y);

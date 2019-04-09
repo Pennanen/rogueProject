@@ -9,18 +9,18 @@ hSpdMax = 22;
 grav = 1;
 awake = false;
 stabbed = false;
-hAcc = 0.3;
+hAcc = 0.2;
 canImpale = true;
 spinDir = 0;
-mass = 1.5;
+mass = 1.2;
 spriteIndex = spr_spinner;
 imageIndex = 0;
 onGround = false;
 
-damage = 1;
+damage = 0.5;
 knockback = 15;
 depth = -59;
-
+smacked = false;
 rarity = 1;
 hpAlpha = 0;
 HpAlphaIncrement = 0.1;

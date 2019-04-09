@@ -1,0 +1,2 @@
+
+Resoluution muuttaminen kesken kaiken pilaa ainaskin yläkulmassa olevien itemeden hoveraamisen.

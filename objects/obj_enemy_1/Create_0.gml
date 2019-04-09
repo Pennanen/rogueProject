@@ -20,4 +20,5 @@ hpAlpha = 0;
 HpAlphaIncrement = 0.1;
 awakeTime = 15; // smaller than 10 leaves hpAlpha too low
 awakening = false;
+smacked = false;
 depth = -59;

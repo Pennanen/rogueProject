@@ -2,7 +2,7 @@
 /*
 */
 
-if (reloadIndex < 11)
+if (reloadIndex < 14)
 	{
 	reloadIndex++;	
 	alarm[0] = 1;

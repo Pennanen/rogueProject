@@ -11,9 +11,9 @@ awake = false;
 stabbed = false;
 hAcc = 0.35;
 canImpale = false; // This is elite and cannot be impaled
-mass = 5;
+mass = 2.5;
 spinDir = 0;
-
+smacked = false;
 spriteIndex = spr_spinner;
 imageIndex = 1;
 onGround = false;

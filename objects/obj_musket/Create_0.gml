@@ -1,12 +1,18 @@
 /// @description
 /*
 */
-knockback = musketKNOCKBACK;
+knockback = musketKNOCKBACK*1.5;
+
+reloadSpeedMulti=4; // only cosmetic
 
 reloading = false;
 reloadSpd = 0;
 stabbing = false;
-stabForce = 17;
+
+stabForce = 24;
+stabDashForce = 16;
+smackForce = 23;
+
 canStab = true;
 
 stabDir = 0;

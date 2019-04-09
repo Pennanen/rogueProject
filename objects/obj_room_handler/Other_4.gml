@@ -7,13 +7,12 @@ if (room != room_start)
 	{
 	obj_player.y = topLine;
 	obj_player.playerPause = true;
-	setCamPos(obj_player.x,obj_player.y);
-
+	setCamPos(obj_camera.targetx,obj_player.y);
 	alarm[0] = 15;
 	}
 	else
 	{
-	setCamPos(obj_player.x,obj_player.y);	
+	setCamPos(obj_camera.targetx,obj_player.y);	
 	}
 	
 if (global.wastedDiamonds > 0)
@@ -24,7 +23,14 @@ if (global.wastedDiamonds > 0)
 		}
 	global.wastedDiamonds = 0;
 	}
-	
+if (global.wastedHpCells > 0)
+	{
+	repeat(global.wastedHpCells)
+		{
+		instance_create_depth(obj_player.x,64,0,obj_hp_cell);
+		}
+	global.wastedHpCells = 0;
+	}	
 //Section musics
 switch(FLOOR)
 	{

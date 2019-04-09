@@ -14,7 +14,7 @@ if (canFire && y > 0 && y < room_height && reloadDir = 0)
 	if (shotsAvailable = 0){reloading = true;audio_play_sound(snd_reload,0,0)}
 	else{kick = true;reloadDir = 360;audio_play_sound(snd_stab,0,0);};
 	recoverSpd = -5;
-	obj_player.hSpd += lengthdir_x(-knockback,bullet.dir);
+	obj_player.hSpd += lengthdir_x(-knockback*3,bullet.dir);
 	obj_player.vSpd += lengthdir_y(-knockback,bullet.dir);
 	audio_play_sound(snd_shoot,0,0);
 	}

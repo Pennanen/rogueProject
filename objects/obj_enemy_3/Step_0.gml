@@ -15,7 +15,7 @@ if (obj_player.x > x && hSpd < hSpdMax){hSpd += hAcc}
 if (obj_player.x < x && hSpd > -hSpdMax){hSpd -= hAcc}
 spinDir += -hSpd/2;
 spinDir += -15*sign(obj_player.x-x);
-if(onGround){vSpd -= choose(0,0,0,0,0,0,0,1,1,2,3);}
+if(onGround){vSpd -= choose(0,0,0,0,0,0,0,1,1,2,2);}
 }
 if (stabbed)
 	{
@@ -30,7 +30,7 @@ if (stabbed)
 		}
 		else
 		{
-		var len = 30/mass;
+		var len = obj_musket.stabForce/mass;
 		var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
 		hSpd = lengthdir_x(len*1.5,dir);
 		vSpd = lengthdir_y(len,dir);

@@ -1,4 +1,0 @@
-/// @description
-/*
-*/
-hover = false;

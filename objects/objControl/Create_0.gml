@@ -10,7 +10,7 @@ application_surface_draw_enable(false);
 surface_resize(application_surface,__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ))
 
 //set initial scale
-scale=0.5;
+scale=1;
 if !window_get_fullscreen()
 {
 window_set_size(__view_get( e__VW.WView, 0 )*scale,__view_get( e__VW.HView, 0 )*scale)

@@ -2,10 +2,10 @@
 /*
 */
 depth = -400;
-
+hudAnchorX = camera_get_view_width(view_camera[0]);
 globalvar playerHP, playerMAXHP, playerDAMAGE,playerSPEED;
 // HP
-playerMAXHP = 4;
+playerMAXHP = 2;
 playerHP = playerMAXHP;
 canHurt = true;
 hurtTime = 60;
@@ -19,7 +19,7 @@ playerSPEED = 1;
 globalvar BAYONET,musketKNOCKBACK,bulletSPEED,musketSHOTS;
 BAYONET = false;
 musketSHOTS = 1;
-musketKNOCKBACK = 5;
+musketKNOCKBACK = 1;
 bulletSPEED = 1;
 globalvar playerDOUBLEJUMP;
 playerDOUBLEJUMP = false;
