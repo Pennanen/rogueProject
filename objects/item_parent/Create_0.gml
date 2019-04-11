@@ -12,3 +12,12 @@ depth = -500;
 image_xscale =scale;
 image_yscale =scale;
 hovery = 0;
+active = false;
+dragging = false;
+currentSlot = noone;
+
+selectSlotStart = true;
+
+initialScale = 1;
+cost = 0;
+trigger = false;

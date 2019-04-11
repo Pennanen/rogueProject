@@ -10,6 +10,14 @@ playerHP = playerMAXHP;
 canHurt = true;
 hurtTime = 60;
 hurtIndex = 0;
+manaReal = 40;
+
+manaIndex1 = 10;
+manaIndex2 = 10;
+manaIndex3 = 10;
+manaIndex4 = 10;
+
+manaMAX = 40;
 
 // DAMAGE
 playerDAMAGE = 1;

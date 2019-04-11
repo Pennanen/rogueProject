@@ -6,6 +6,12 @@ dir = 0;
 lastDir = 0;
 image_xscale = 1;
 image_yscale = 0.5;
-grav = 1;
+
+grav = 0;
+vy =0;
 baseDamage = 1;
 damage = baseDamage+playerDAMAGE;
+
+a = 5;
+freq = 0.7;
+t = 0;

@@ -4,7 +4,7 @@
 var half = string(playerHP % 1);
 var xx = camera_get_view_x(view_camera[0])+hudAnchorX/2;
 var hpX = xx-(playerMAXHP-1)*50/2;
-var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-60;
+var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-90;
 for(i=0;i<playerMAXHP;++i)
 	{
 	if (i = ceil(playerHP)-1)
@@ -18,3 +18,8 @@ for(i=0;i<playerMAXHP;++i)
 	draw_set_valign(fa_center);
 	draw_set_halign(fa_center);
 	//draw_text(xx,yy-10,half);
+
+draw_sprite_ext(spr_player_mana,manaIndex1,xx-60,yy+21,1.5,1.5,0,c_white,1);
+draw_sprite_ext(spr_player_mana,manaIndex2,xx-20,yy+21,1.5,1.5,0,c_white,1);
+draw_sprite_ext(spr_player_mana,manaIndex3,xx+20,yy+21,1.5,1.5,0,c_white,1);
+draw_sprite_ext(spr_player_mana,manaIndex4,xx+60,yy+21,1.5,1.5,0,c_white,1);

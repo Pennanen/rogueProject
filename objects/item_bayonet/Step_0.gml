@@ -11,3 +11,14 @@ if (collected = false && collect)
 	BAYONET = true;
 	collected = true;
 	}
+if (trigger)
+	{
+	if (obj_player.y > 0 && obj_player.y < room_height)
+		{
+		if(obj_musket.canStab && obj_musket.reloadDir = 0)
+			{
+			obj_musket.stab = true;
+			}
+		}
+	trigger = false;
+	}

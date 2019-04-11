@@ -8,7 +8,7 @@ rarePool = ds_list_create();
 uRarePool = ds_list_create();
 
 collectedItems = ds_list_create();
-
+actives = 0;
 ds_list_add(commonPool,item_orange_syringe,item_orange_syringe);
 ds_list_add(commonPool,item_yellow_syringe,item_yellow_syringe);
 ds_list_add(commonPool,item_red_syringe,item_red_syringe);
@@ -21,3 +21,34 @@ ds_list_shuffle(rarePool);
 
 ds_list_add(uRarePool,item_rainbow_syringe);
 ds_list_shuffle(uRarePool);
+
+viewx = camera_get_view_x(view_camera[0]);
+viewy = camera_get_view_y(view_camera[0]);
+
+vieww = camera_get_view_width(view_camera[0]);
+viewh = camera_get_view_height(view_camera[0]);
+
+slot[0] = instance_create_depth(x,y,-500,obj_slot);
+slot[0].slotKey = mb_left;
+slot[1] = instance_create_depth(x,y,-500,obj_slot);
+slot[1].slotKey = mb_right;
+slot[2] = instance_create_depth(x,y,-500,obj_slot);
+slot[2].slotKey = vk_shift;
+slot[3] = instance_create_depth(x,y,-500,obj_slot);
+slot[3].slotKey = ord("Q");
+
+activex[0] = 0;
+activey[0] = 0;
+
+activex[1] = 0;
+activey[1] = 0;
+
+activex[2] = 0;
+activey[2] = 0;
+
+activex[3] = 0;
+activey[3] = 0;
+
+mana = 0;
+
+alarm[0] = 1;

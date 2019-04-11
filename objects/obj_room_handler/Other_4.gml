@@ -32,10 +32,11 @@ if (global.wastedHpCells > 0)
 	global.wastedHpCells = 0;
 	}	
 //Section musics
+/*
 switch(FLOOR)
 	{
 	case 10: sectionMusic = music;break;
 	case 20: sectionMusic = music;break;
 	//....
-	}
+	}*/
 	

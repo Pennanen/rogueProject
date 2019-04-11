@@ -1,14 +1,30 @@
 /// @description
 /*
 */
-var xx = camera_get_view_x(view_camera[0])+44;
-var yy = camera_get_view_y(view_camera[0])+45;
+var xx = viewx+44;
+var yy = viewy+45;
+
+for(i=0;i<4;i++)
+	{
+	slot[i].x = activex[i];	
+	slot[i].y = activey[i];	
+	}
+
+
 if (ds_list_size(collectedItems)>0)
 	{
 	for(i=0;i<ds_list_size(collectedItems);i++)
 		{
 		item = ds_list_find_value(collectedItems,i);
-		item.x = (xx+i*50);
-		item.y = yy;
+		if (item.active)
+			{
+			actives++;
+			}
+			else
+			{
+			item.x = (xx+(i-actives)*60);
+			item.y = yy;
+			}
 		}
+		actives = 0;
 	}

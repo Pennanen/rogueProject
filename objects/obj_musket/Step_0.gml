@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-if (canFire && y > 0 && y < room_height && reloadDir = 0)
+if (shoot && !disabled)
 	{
 	shotsAvailable--;
 	var len = 42*side/2;
@@ -17,4 +17,24 @@ if (canFire && y > 0 && y < room_height && reloadDir = 0)
 	obj_player.hSpd += lengthdir_x(-knockback*3,bullet.dir);
 	obj_player.vSpd += lengthdir_y(-knockback,bullet.dir);
 	audio_play_sound(snd_shoot,0,0);
+	shoot = false;
 	}
+	
+if (BAYONET)
+{
+if (stab)
+	{
+	//var len = 42*side/2;
+	//var tipx = x+lengthdir_x(len,dir+5*sign(side));
+	//var tipy = y+lengthdir_y(len,dir+5*sign(side));
+	//instance_create_depth(tipx,tipy,depth-1,obj_muzzle);
+	stabDamage = playerDAMAGE;
+	alarm[1] = 4;
+	canStabDamage = true;
+	canStab = false;
+	stabDir = point_direction(x,y,mouse_x,mouse_y);
+	stabbing = true;
+	audio_play_sound(snd_stab,0,0);
+	stab = false;
+	}
+}

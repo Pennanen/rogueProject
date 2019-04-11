@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-maxHp = 6+DIFFICULTY*2;
+maxHp = 7+DIFFICULTY*2;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;
@@ -26,3 +26,5 @@ hpAlpha = 0;
 HpAlphaIncrement = 0.1;
 awakeTime = 15; // smaller than 10 leaves hpAlpha too low
 awakening = false;
+
+stabThreshold = 40;

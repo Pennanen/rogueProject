@@ -31,7 +31,14 @@ app_yscal = ceil(screen_h / app_h);
 //up-scaled surface 
 screen_sur = surface_create(app_w * app_xscal, app_h * app_yscal);
 
-
+    if window_get_fullscreen()
+    {
+    }
+    else
+    {
+    window_set_fullscreen(true)
+    }
+    window_set_size(__view_get( e__VW.WView, 0 )*scale,__view_get( e__VW.HView, 0 )*scale)
 
 ///Goto next room
 room_goto_next();
