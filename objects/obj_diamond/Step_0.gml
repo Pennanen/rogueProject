@@ -7,6 +7,14 @@ if (!place_meeting(x,y+1,obj_solid))
 	x+=hSpd;	
 	y+=vSpd;
 	}
+	else if (bounces > 0)
+		{
+		bounces--;
+		vSpd = -vSpd/1.3;
+		
+		y+=vSpd;
+		x+=hSpd;
+		}
 if (place_meeting(x,y-1,obj_player))
 	{
 	obj_item_handler.diamonds+=1;

@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+if (manaFill > 0 && canFill){if (manaReal < manaMAX){manaReal++;manaFill--;alarm[1]=2;}else{manaFill--;alarm[1]=1}canFill = false}
+if (hudAnchorX != camera_get_view_width(view_camera[0]))hudAnchorX = camera_get_view_width(view_camera[0]);
 if (playerHP <= 0)
 	{
 	game_restart();	

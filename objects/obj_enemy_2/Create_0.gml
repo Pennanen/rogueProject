@@ -27,4 +27,5 @@ HpAlphaIncrement = 0.1;
 awakeTime = 15; // smaller than 10 leaves hpAlpha too low
 awakening = false;
 
-stabThreshold = 40;
+stabThreshold = 15;
+breakFree = 0;

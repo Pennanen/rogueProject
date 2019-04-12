@@ -2,14 +2,6 @@
 /*
 */
 
-// Deal damage to player
-if (place_meeting(x,y,obj_player) && !stabbed)
-	{
-		damagePlayer(damage,knockback);
-		var knockbackSelfDir = point_direction(obj_player.x,obj_player.y,x,y);
-		hSpd = lengthdir_x(5,knockbackSelfDir);
-		vSpd = lengthdir_y(5,knockbackSelfDir);
-	}
 	
 // Take bullet damage and knockback if stabbed
 col = instance_place(x,y,obj_bullet);
@@ -24,7 +16,7 @@ if (col != noone)
 			vSpd = lengthdir_y(len,dir);
 			}
 		hp-=col.damage;
-		obj_stat_system.manaReal = clamp(obj_stat_system.manaReal+2,0,obj_stat_system.manaMAX)
+		obj_stat_system.manaFill+=choose(1,2,2,2,3);
 		instance_destroy(col,true);
 	}	
 	
@@ -52,11 +44,9 @@ if (col != noone)
 		hSpd = 0;
 		if (stabbed)
 			{
-			var len = 70;
-			var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
-			var tipx = obj_musket.x+lengthdir_x(len,dir);
-			var tipy = obj_musket.y+lengthdir_y(len,dir);
-			if (point_distance(x,y,tipx,tipy)>stabThreshold){stabbed = false;}
+			var tipx = obj_musket.tipXpos;
+			var tipy = obj_musket.tipYpos;
+			if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
 			}
 	}
 	
@@ -77,10 +67,10 @@ if (col != noone)
 		vSpd = 0;
 		if (stabbed)
 			{
-			var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
-			var len = 70;
-			var tipx = obj_musket.x+lengthdir_x(len,dir);
-			var tipy = obj_musket.y+lengthdir_y(len,dir);
-			if (point_distance(x,y,tipx,tipy)>stabThreshold){stabbed = false;}
+			var tipx = obj_musket.tipXpos;
+			var tipy = obj_musket.tipYpos;
+			if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
 			}
 	}
+
+

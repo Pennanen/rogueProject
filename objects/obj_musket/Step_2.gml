@@ -12,49 +12,23 @@ if (canStabDamage)
 	{
 	instance_create_depth(obj_player.x,obj_player.y,obj_player.depth+1,obj_player_trail);
 	var len = 70*side/2;
-	var tipx = x+lengthdir_x(len,dir*sign(side));
-	var tipy = y+lengthdir_y(len,dir*sign(side));
-	inst = collision_line(x,y,tipx,tipy,obj_enemy_1,1,true);
+	inst = collision_line(x,y,tipXpos,tipYpos,obj_enemy_1,1,true);
 	if (instance_exists(inst))
 		{
 			if(obj_enemy_1.stabbed = false){impaledEnemy = inst;impale = true;inst.stabbed = true;inst.hp-=stabDamage;canStabDamage = false;alarm[2]=stabCooldownSteps};
 		}
-	x += ((obj_player.x+side*7+lengthdir_x(len,dir))-x)*0.4;
+	x += ((obj_player.x+side*12+lengthdir_x(len,dir))-x)*0.4;
 	y = obj_player.y;
 	}
-else
+else if (!impale)
 	{
-	var	kickPowerx = lengthdir_x(reloadSpd*-0.5*side/2,dir);
-	var	kickPowery = -abs(lengthdir_y(reloadSpd*-2*side/2,dir));
-	x += ((obj_player.x+side*7)-x)*0.4+kickPowerx;
-	y = obj_player.y+kickPowery;
+	var	kickPowerx = lengthdir_x(reloadSpd*1*side/2,dir);
+	var	kickPowery = -abs(lengthdir_y(reloadSpd*1*side/2,dir));
+	x += ((obj_player.x+side*8)-x)*0.4+kickPowerx;
+	y = obj_player.y-3+kickPowery;
 	}
 	
-if (impale && instance_exists(impaledEnemy))
-	{
-	if (impaledEnemy.canImpale)
-		{
-		var len = 70;
-		var dire = point_direction(x,y,mouse_x,mouse_y)
-		var tipx = x+lengthdir_x(len,dire);
-		var tipy = y+lengthdir_y(len,dire);
-		impaledEnemy.hSpd = (tipx-impaledEnemy.x);
-		impaledEnemy.vSpd = (tipy-impaledEnemy.y);
-		}
-		else
-		{
-		var len = stabForce/impaledEnemy.mass;
-		var dire = point_direction(x,y,mouse_x,mouse_y)
-		impaledEnemy.hSpd = lengthdir_x(len*1.5,dire);
-		impaledEnemy.vSpd = lengthdir_y(len,dire);
-		impaledEnemy.stabbed = false;
-		impale = false;
-		}
-	}
-if (instance_exists(impaledEnemy))
-	{
-	if (impaledEnemy.stabbed = false){impale = false;impaledEnemy = noone};
-	}
+
 
 if (reloading)
 	{
@@ -70,8 +44,8 @@ if (reloading)
 			var hitDire = point_direction(x,y,inst.x,inst.y-10);
 			inst.hSpd/=2;
 			var hitForce = smackForce/inst.mass;
-			inst.hSpd += lengthdir_x(hitForce,hitDire);
-			inst.vSpd += lengthdir_y(hitForce*3,hitDire);
+			inst.hSpd = lengthdir_x(hitForce,hitDire);
+			inst.vSpd = lengthdir_y(hitForce*3,hitDire);
 			inst.alarm[1] = 30;
 			}
 			}

@@ -18,6 +18,7 @@ if (trigger)
 		if(obj_musket.canStab && obj_musket.reloadDir = 0)
 			{
 			obj_musket.stab = true;
+			obj_stat_system.manaReal-=cost;
 			}
 		}
 	trigger = false;

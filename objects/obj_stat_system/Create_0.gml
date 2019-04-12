@@ -16,9 +16,9 @@ manaIndex1 = 10;
 manaIndex2 = 10;
 manaIndex3 = 10;
 manaIndex4 = 10;
-
+canFill = true;
 manaMAX = 40;
-
+manaFill = 0;
 // DAMAGE
 playerDAMAGE = 1;
 // SPEED

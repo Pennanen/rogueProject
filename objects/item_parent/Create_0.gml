@@ -21,3 +21,4 @@ selectSlotStart = true;
 initialScale = 1;
 cost = 0;
 trigger = false;
+canHold = false;

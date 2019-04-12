@@ -1,12 +1,19 @@
 /// @description
 /*
 */
-if (!collision_line(x,y,x,y+1,obj_solid,0,0))
+if (!place_meeting(x,y+1,obj_solid))
 	{
 	vSpd += grav;
 	x+=hSpd;	
 	y+=vSpd;
 	}
+	else if (bounces > 0)
+		{
+		bounces--;
+		vSpd = -vSpd/1.3;
+		y+=vSpd;
+		x+=hSpd;
+		}
 if (place_meeting(x,y-1,obj_player))
 	{
 	if (playerHP < playerMAXHP){playerHP+=0.5;instance_destroy();}

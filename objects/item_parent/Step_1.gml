@@ -3,8 +3,7 @@
 */
 if(position_meeting(mouse_x, mouse_y, id))
 	{
-	hover = true;
-	showText = true;
+	if (hover = false){alarm[1] = 15;hover = true}
 	}
 	else
 	{

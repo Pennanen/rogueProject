@@ -30,12 +30,16 @@ viewh = camera_get_view_height(view_camera[0]);
 
 slot[0] = instance_create_depth(x,y,-500,obj_slot);
 slot[0].slotKey = mb_left;
+slot[0].keyIndex = 0;
 slot[1] = instance_create_depth(x,y,-500,obj_slot);
 slot[1].slotKey = mb_right;
+slot[1].keyIndex = 1;
 slot[2] = instance_create_depth(x,y,-500,obj_slot);
-slot[2].slotKey = vk_shift;
+slot[2].slotKey = ord("Q");
+slot[2].keyIndex = 2;
 slot[3] = instance_create_depth(x,y,-500,obj_slot);
-slot[3].slotKey = ord("Q");
+slot[3].slotKey = ord("E");
+slot[3].keyIndex = 3;
 
 activex[0] = 0;
 activey[0] = 0;

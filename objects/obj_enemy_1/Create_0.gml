@@ -15,7 +15,7 @@ damage = 0.5;
 knockback = 15;
 mass = 1;
 
-stabThreshold = 1;
+stabThreshold = 20;
 
 rarity = 1;
 hpAlpha = 0;
@@ -25,3 +25,4 @@ awakening = false;
 smacked = false;
 onGround = false;
 depth = -59;
+breakFree = 0;
