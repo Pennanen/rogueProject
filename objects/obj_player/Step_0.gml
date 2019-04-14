@@ -37,7 +37,7 @@ else // Player not paused
 	if (keyRight && !keyLeft && hSpd < hSpdMax){hSpd += hAcc;image_xscale = 1}
 	if (keyUp && onGround){vSpd -= jumpSpd;}
 	if (keyUp && jumpSave > 1){vSpd -= jumpSpd;jumpSave = 1}
-	
+	else if (keyUp && !onGround && doubleJumped = false && playerDOUBLEJUMP){vSpd = -jumpSpd/1.2;doubleJumped = true}
 	// Variable jump and gravity control
 	if (keyUpHold && vSpd < 0 && !onGround){}
 	else if (vSpd < 0 && !onGround){vSpd+=1;}

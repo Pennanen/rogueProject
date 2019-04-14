@@ -7,6 +7,7 @@ if (shoot && !disabled)
 	bullet = instance_create_depth(tipXpos,tipYpos,depth+1,obj_bullet);
 	instance_create_depth(tipXpos,tipYpos,depth-1,obj_muzzle);
 	bullet.dir = point_direction(x,y,mouse_x,mouse_y);
+	camShake(1,bullet.dir+180,3);
 	canFire = false;
 	if (shotsAvailable = 0){reloading = true;audio_play_sound(snd_reload,0,0)}
 	else{kick = true;reloadDir = 360;audio_play_sound(snd_stab,0,0);};

@@ -1015,6 +1015,14 @@
             }
         },
         {
+            "Key": "ddd60723-14a9-47d2-bdcd-33fac7ac7907",
+            "Value": {
+                "id": "388a9ba6-cbb9-411e-a661-2475e4e673a1",
+                "resourcePath": "scripts\\camShake\\camShake.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e261fdb7-d12c-4a19-af09-562a9ba78c2a",
             "Value": {
                 "id": "93533a79-1d8d-428c-8595-1f24a1f7c289",
@@ -1129,7 +1137,8 @@
         "728dd17c-80c4-4239-885e-7c8f21c80f91",
         "b3e0c5ac-cb4f-456a-9620-a11903dc861d",
         "0678d3a8-56db-4380-858a-4c34d43cba3d",
-        "af225216-a72a-4764-913c-20b514aa6ef3"
+        "af225216-a72a-4764-913c-20b514aa6ef3",
+        "ddd60723-14a9-47d2-bdcd-33fac7ac7907"
     ],
     "tutorial": ""
 }
