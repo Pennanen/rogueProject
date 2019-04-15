@@ -23,13 +23,13 @@ if (global.wastedDiamonds > 0)
 		}
 	global.wastedDiamonds = 0;
 	}
-if (global.wastedHpCells > 0)
+if (global.wastedManaCells > 0)
 	{
-	repeat(global.wastedHpCells)
+	repeat(global.wastedManaCells)
 		{
-		instance_create_depth(obj_player.x,64,0,obj_hp_cell);
+		instance_create_depth(obj_player.x,64,0,obj_mana_cell);
 		}
-	global.wastedHpCells = 0;
+	global.wastedManaCells = 0;
 	}	
 //Section musics
 /*

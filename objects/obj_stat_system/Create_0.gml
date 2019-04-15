@@ -3,10 +3,11 @@
 */
 depth = -400;
 hudAnchorX = camera_get_view_width(view_camera[0]);
-globalvar playerHP, playerMAXHP, playerDAMAGE,playerSPEED;
+globalvar playerHP, playerMAXHP, playerDAMAGE,playerSPEED,manaGAIN;
 // HP
-playerMAXHP = 2;
+playerMAXHP = 1;
 playerHP = playerMAXHP;
+manaGAIN = 1.5;
 canHurt = true;
 hurtTime = 60;
 hurtIndex = 0;

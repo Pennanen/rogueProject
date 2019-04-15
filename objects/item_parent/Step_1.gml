@@ -10,3 +10,13 @@ if(position_meeting(mouse_x, mouse_y, id))
 	hover = false;
 	
 	}
+	
+if (active && trigger)
+	{
+		useScale = 0.3;
+		
+	}
+	else
+	{
+	useScale = 0;	
+	}

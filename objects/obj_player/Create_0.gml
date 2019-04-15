@@ -8,6 +8,7 @@ vSpd = 0;
 baseSpdMax = 4;
 hSpd = 0;
 hSpdMax = baseSpdMax+playerSPEED;
+maxFallSpd = 32;
 jumpSave = 3; // Save jump, start counter, dont save jump 3 - 2 - 1
 maxDamp = 0.8;
 hAcc = 1.25;

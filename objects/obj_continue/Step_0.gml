@@ -2,9 +2,9 @@
 /*
 */
 image_index = index;
-vSpd += (0-vSpd)*0.08;
+vSpd += (0-vSpd)*0.07;
 if (ready){if (image_alpha > 0){image_alpha -= 0.1;y-=52;}}
-else {image_alpha += (1-image_alpha)*0.02;}
+else {image_alpha += (1-image_alpha)*0.05;}
 if (ready && image_alpha <= 0.1){instance_destroy()};
 y+=vSpd;
 

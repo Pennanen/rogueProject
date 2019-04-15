@@ -7,25 +7,30 @@ if (stabbing)
 	obj_player.vSpd = lengthdir_y(stabDashForce,stabDir);
 	}
 	
-	
+
 if (canStabDamage)
 	{
 	instance_create_depth(obj_player.x,obj_player.y,obj_player.depth+1,obj_player_trail);
-	var len = 70*side/2;
-	inst = collision_line(x,y,tipXpos,tipYpos,obj_enemy_1,1,true);
+	var len = 32*sign(side);
+	inst = collision_line(obj_player.x,obj_player.y,tipXpos,tipYpos,obj_enemy_1,1,true);
+	inst2 = collision_circle(tipXpos,tipYpos,5,obj_enemy_1,1,true);
 	if (instance_exists(inst))
 		{
-			if(obj_enemy_1.stabbed = false){impaledEnemy = inst;impale = true;inst.stabbed = true;inst.hp-=stabDamage;canStabDamage = false;alarm[2]=stabCooldownSteps};
+			if(inst.stabbed = false){impaledEnemy = inst;impale = true;inst.stabbed = true;inst.hp-=stabDamage;canStabDamage = false;alarm[2]=stabCooldownSteps};
 		}
-	x += ((obj_player.x+side*12+lengthdir_x(len,dir))-x)*0.4;
+	else if (instance_exists(inst2))
+		{
+			if(inst2.stabbed = false){impaledEnemy = inst2;impale = true;inst2.stabbed = true;inst2.hp-=stabDamage;canStabDamage = false;alarm[2]=stabCooldownSteps};
+		}
+	x += ((obj_player.x+side*6+lengthdir_x(len,dir))-x)*0.4;
 	y = obj_player.y;
 	}
 else if (!impale)
 	{
 	var	kickPowerx = lengthdir_x(reloadSpd*1*side/2,dir);
-	var	kickPowery = -abs(lengthdir_y(reloadSpd*1*side/2,dir));
+	var	kickPowery = lengthdir_y(reloadSpd*1*side/2,dir);
 	x += ((obj_player.x+side*8)-x)*0.4+kickPowerx;
-	y = obj_player.y-3+kickPowery;
+	y = obj_player.y-3+kickPowery*3;
 	}
 	
 

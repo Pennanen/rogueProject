@@ -53,6 +53,4 @@ activey[2] = 0;
 activex[3] = 0;
 activey[3] = 0;
 
-mana = 0;
-
 alarm[0] = 1;

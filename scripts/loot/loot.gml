@@ -10,5 +10,5 @@ repeat(choose(1,2,3)*rarity)
 }
 else if (type = 2)
 	{
-		instance_create_depth(x,y,depth-1,obj_hp_cell);
+		instance_create_depth(x,y,depth-1,obj_mana_cell);
 	}

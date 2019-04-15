@@ -1,7 +1,11 @@
 /// @description
 /*
 */
+
 dir = point_direction(x,y,mouse_x,mouse_y);
+
+
+
 if (sign(side) = 1)
 	{
 	dir = dir;
@@ -10,7 +14,9 @@ if (sign(side) = 1)
 	{
 	dir=dir+180;
 	}
+
 image_angle = dir;
+
 if (!reloading && canFire && reloadDir = 0 && !kick)
 {
 side = obj_player.image_xscale;

@@ -1,5 +1,5 @@
-/// @description
+/// @description Starting items
 /*
 */
 collectItem(item_musket);
-collectItem(item_bayonet);
+collectItem(item_apple);

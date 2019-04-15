@@ -2,7 +2,7 @@
 /*
 */
 image_index = index;
-vSpd += (0-vSpd)*0.08;
+vSpd += (0-vSpd)*0.06;
 if (obj_upgrade_screen.ready){if (image_alpha > 0){image_alpha -= 0.1;y-=52;}}
 else {image_alpha += (1-image_alpha)*0.05;}
 y+=vSpd;

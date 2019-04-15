@@ -17,6 +17,7 @@ dragging = false;
 currentSlot = noone;
 
 selectSlotStart = true;
+useScale = 0;
 
 initialScale = 1;
 cost = 0;

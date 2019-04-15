@@ -39,7 +39,7 @@ if (stab)
 if (impale && instance_exists(impaledEnemy))
 	{
 		var len = 25;
-		var dire = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y)
+		var dire = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y);
 		var tipx = obj_player.x+lengthdir_x(len,dire);
 		var tipy = obj_player.y+lengthdir_y(len,dire);
 		x += (tipx-x)*0.9;
@@ -47,16 +47,21 @@ if (impale && instance_exists(impaledEnemy))
 	if (impaledEnemy.stabbed = false){impale = false;impaledEnemy = noone}
 	else if (impaledEnemy.canImpale)
 		{
-			var len = 40;
-			var dire = point_direction(x,y,mouse_x,mouse_y)
+			var len = 40*sign(side);
+			var dire = dir;
 			var impaleXpos = x+lengthdir_x(len,dire);
 			var impaleYpos = y+lengthdir_y(len,dire);
 			var dist = point_distance(impaleXpos,impaleYpos,impaledEnemy.x,impaledEnemy.y);
-		if (dist<impaledEnemy.stabThreshold*2)
+		if (dist<impaledEnemy.stabThreshold*3 && !collision_point(impaleXpos,impaleYpos,obj_solid,0,0))
 			{
 			impaledEnemy.hSpd = (impaleXpos-impaledEnemy.x);
 			impaledEnemy.vSpd = (impaleYpos-impaledEnemy.y);
-			}
+			}else 
+				{
+				impaledEnemy.hSpd += (0-impaledEnemy.hSpd)*0.3;
+				impaledEnemy.vSpd += (0-impaledEnemy.vSpd)*0.3;
+				if (impaledEnemy.breakFree = 0){impaledEnemy.alarm[2] = 1;impaledEnemy.breakFree = 1;}
+				}
 		}
 		else
 		{

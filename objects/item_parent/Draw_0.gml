@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-draw_sprite_ext(sprite_index,image_index,x,y+hovery,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+draw_sprite_ext(sprite_index,image_index,x,y+hovery,image_xscale+useScale,image_yscale+useScale,image_angle,image_blend,image_alpha)
 if (showText && !dragging)
 	{
 	draw_set_alpha(hovery);

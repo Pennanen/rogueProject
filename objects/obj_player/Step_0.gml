@@ -43,6 +43,7 @@ else // Player not paused
 	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
 	vSpd+=grav;
+	vSpd = clamp(vSpd,-100,maxFallSpd);
 	// Collision
 	//Horizontal collisions
 	x += hSpd;

@@ -26,3 +26,4 @@ smacked = false;
 onGround = false;
 depth = -59;
 breakFree = 0;
+flying = false;

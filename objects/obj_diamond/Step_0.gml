@@ -10,7 +10,7 @@ if (!place_meeting(x,y+1,obj_solid))
 	else if (bounces > 0)
 		{
 		bounces--;
-		vSpd = -vSpd/1.3;
+		vSpd = -vSpd/1.5;
 		
 		y+=vSpd;
 		x+=hSpd;

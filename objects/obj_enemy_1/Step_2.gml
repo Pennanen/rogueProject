@@ -16,7 +16,7 @@ if (col != noone)
 			vSpd = lengthdir_y(len,dir);
 			}
 		hp-=col.damage;
-		obj_stat_system.manaFill+=choose(1,2,2,2,3);
+		obj_stat_system.manaFill+=manaGAIN;
 		instance_destroy(col,true);
 	}	
 	

@@ -8,7 +8,7 @@ else if (awakening)
 	if (hpAlpha < 1)hpAlpha+=HpAlphaIncrement;
 	}
 	
-	vSpd+=grav;
+	if (!flying){vSpd+=grav;}
 	
 	
 	if (hp <= 0){instance_destroy();}
