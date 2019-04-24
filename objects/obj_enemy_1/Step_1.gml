@@ -1,7 +1,8 @@
 /// @description
 /*
 */
-if (!awake && obj_player.y > y-32 && awakening = false){awakening = true;alarm[0] = awakeTime};
+
+if (!awake && obj_player.y > y-32 && awakening = false || !awakening && !awake && point_distance(obj_player.x,obj_player.y,x,y)< awakeDistance){awakening = true;alarm[0] = awakeTime};
 
 else if (awakening)
 	{

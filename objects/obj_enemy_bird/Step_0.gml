@@ -2,7 +2,7 @@
 /*
 */
 //Behaviour
-if (awake && !stabbed)
+if (awake && !stabbed && !pause)
 {
 if (changePos = 1)
 	{

@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+if (obj_player.playerPause = false)
+{
 if (stabbing)
 	{
 	obj_player.hSpd = lengthdir_x(stabDashForce,stabDir);
@@ -83,3 +85,4 @@ if (canFire)
 	if (BAYONET){sprite_index = spr_musket_reloading_bayonet;}else{sprite_index = spr_musket_reloading;}
 	image_index = reloadIndex;
 	}
+}

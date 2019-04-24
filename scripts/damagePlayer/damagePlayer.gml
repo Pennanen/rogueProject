@@ -10,6 +10,7 @@ if (obj_stat_system.canHurt)
 		obj_player.vSpd = -knockback+lengthdir_y(knockback,dir)
 		}
 	playerHP-=damage;
+	if (playerHP <= 0){handle = instance_create_depth(x,y,0,obj_dead_handler);handle.cause = name}
 	obj_stat_system.alarm[0] = obj_stat_system.hurtTime;
 	obj_stat_system.canHurt = false;	
 	}

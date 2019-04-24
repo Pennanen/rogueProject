@@ -3,9 +3,13 @@
 */
 if (manaFill > 0 && canFill){if (manaReal < manaMAX){manaReal++;manaFill--;alarm[1]=2;}else{manaFill--;alarm[1]=1}canFill = false}
 if (hudAnchorX != camera_get_view_width(view_camera[0]))hudAnchorX = camera_get_view_width(view_camera[0]);
-if (playerHP <= 0)
+if (playerHP <= 0 && playerDEAD = false)
 	{
-	game_restart();	
+	playerDEAD = true;
+	obj_enemy_1.pause = true;
+	obj_player.playerPause = true;
+	alarm[2] = 60;
+	
 	}
 if (!canHurt)
 	{

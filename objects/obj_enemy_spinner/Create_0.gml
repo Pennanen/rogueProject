@@ -1,18 +1,19 @@
 /// @description
 /*
 */
-maxHp = 7+DIFFICULTY*2;
+pause = false;
+maxHp = 5+DIFFICULTY*2;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;
-hSpdMax = 22;
+hSpdMax = 9;
 grav = 1;
 awake = false;
 stabbed = false;
-hAcc = 0.2;
+hAcc = 0.18;
 canImpale = true;
 spinDir = 0;
-mass = 1.2;
+mass = 1.25;
 spriteIndex = spr_spinner;
 imageIndex = 0;
 onGround = false;
@@ -30,5 +31,9 @@ awakening = false;
 stabThreshold = 22;
 breakFree = 0;
 
+hpbar = instance_create_depth(x,y,0,obj_hp_bar);
+hpbar.target = id;
+
 name = "Spinner"
 flying = false;
+awakeDistance = 100;

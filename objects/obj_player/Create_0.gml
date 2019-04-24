@@ -9,6 +9,7 @@ baseSpdMax = 4;
 hSpd = 0;
 hSpdMax = baseSpdMax+playerSPEED;
 maxFallSpd = 32;
+maxRiseSpd = 24;
 jumpSave = 3; // Save jump, start counter, dont save jump 3 - 2 - 1
 maxDamp = 0.8;
 hAcc = 1.25;
@@ -19,7 +20,6 @@ gDamp = 0.8;
 
 playerPause = false;
 onGround = false;
-
 instance_create_depth(x,y,depth-1,obj_musket);
 instance_create_depth(x,y,depth-1,obj_camera);
 

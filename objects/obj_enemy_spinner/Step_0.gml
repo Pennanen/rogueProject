@@ -2,11 +2,16 @@
 /*
 */
 //Behaviour
-if (awake && !stabbed)
+if (awake && !stabbed && !pause)
 {
 if (obj_player.x > x && hSpd < hSpdMax){hSpd += hAcc}
 if (obj_player.x < x && hSpd > -hSpdMax){hSpd -= hAcc}
-spinDir += -hSpd/2;
-spinDir += -15*sign(obj_player.x-x);
-if(onGround && !smacked){vSpd -= choose(0,0,0,0,0,2,4)+abs((obj_player.y-y))/25;}
+spinDir += -hSpd;
+spinDir += -7*sign(obj_player.x-x);
+if (place_meeting(x+24,y+4,obj_solid) && hSpd >= 0){vSpd = -4};
+if (place_meeting(x-24,y+4,obj_solid) && hSpd <= 0){vSpd = -4};
+if(onGround && !smacked){vSpd -= (choose(0,0,0,0,0,0,1)+abs((obj_player.y-y))/24)*(room_width-distance_to_point(obj_player.x,obj_player.y))/1000;}
+
+image_xscale += (sign(obj_player.x-x)-image_xscale)*0.1;
+
 }

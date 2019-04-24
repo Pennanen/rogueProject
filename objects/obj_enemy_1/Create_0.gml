@@ -1,7 +1,10 @@
 /// @description
 /*
 */
-maxHp = 5+DIFFICULTY*2;
+
+pause = false;
+name = "parent"
+maxHp = 4+DIFFICULTY*2;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;
@@ -27,3 +30,8 @@ onGround = false;
 depth = -59;
 breakFree = 0;
 flying = false;
+
+hpbar = instance_create_depth(x,y,0,obj_hp_bar);
+hpbar.target = id;
+
+awakeDistance = 100;

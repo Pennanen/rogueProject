@@ -4,7 +4,7 @@
 shoot = false;
 
 knockback = 2+musketKNOCKBACK*1;
-
+bulletKnockback = 1+musketKNOCKBACK;
 reloadSpeedMulti=4; // only cosmetic
 
 reloading = false;

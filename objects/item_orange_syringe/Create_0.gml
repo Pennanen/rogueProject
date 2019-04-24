@@ -6,5 +6,5 @@
 event_inherited();
 
 name = "Yellow Syringe"
-description = "Damage +1"
+description = "Damage Up"
 image_index = 1;

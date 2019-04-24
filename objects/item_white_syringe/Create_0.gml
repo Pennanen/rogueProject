@@ -6,5 +6,5 @@
 event_inherited();
 
 name = "White Syringe"
-description = "Bullet Speed +1, Speed +1.  "
+description = "Bullet Speed Up, Speed Up"
 image_index = 1;

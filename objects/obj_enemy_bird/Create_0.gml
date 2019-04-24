@@ -1,7 +1,8 @@
 /// @description
 /*
 */
-maxHp = 6+DIFFICULTY*2;
+pause = false;
+maxHp = 3+DIFFICULTY*2;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;
@@ -35,3 +36,8 @@ targetX = x;
 targetY = y;
 flying = true;
 multi = 3;
+
+hpbar = instance_create_depth(x,y,0,obj_hp_bar);
+hpbar.target = id;
+
+awakeDistance = 100;

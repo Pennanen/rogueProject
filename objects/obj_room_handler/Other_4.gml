@@ -1,14 +1,14 @@
 /// @description
 /*
 */
-FLOOR++;
 
+FLOOR++;
 if (room != room_start)
 	{
 	obj_player.y = topLine;
-	obj_player.playerPause = true;
+	if (!fork){obj_player.playerPause = true;alarm[0] = 15;}
+	else {fork = false;}
 	setCamPos(obj_camera.targetx,obj_player.y);
-	alarm[0] = 15;
 	}
 	else
 	{

@@ -1,6 +1,7 @@
 /// @description
 /*
 */
+maxGain = maxGain*audioGlobalGain;
 if (targetAudio != noone)
 	{
 	if (targetAudio != music && currentGain > 0) 

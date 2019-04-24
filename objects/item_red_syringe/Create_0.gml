@@ -6,5 +6,5 @@
 event_inherited();
 
 name = "Red syringe"
-description = "Max health +1"
+description = "Health Up"
 image_index = 0;

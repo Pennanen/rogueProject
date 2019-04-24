@@ -9,7 +9,7 @@ image_yscale = 0.5;
 
 grav = 0;
 vy =0;
-baseDamage = 1;
+baseDamage = 0.4;
 damage = baseDamage+playerDAMAGE;
 
 a = 5;

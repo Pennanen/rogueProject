@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-if (shoot && !disabled)
+if (shoot && !disabled && obj_player.playerPause = false)
 	{
 	shotsAvailable--;
 	bullet = instance_create_depth(tipXpos,tipYpos,depth+1,obj_bullet);
@@ -20,7 +20,7 @@ if (shoot && !disabled)
 	
 if (BAYONET)
 {
-if (stab)
+if (stab && obj_player.playerPause = false)
 	{
 	stabDamage = playerDAMAGE;
 	alarm[1] = 3;

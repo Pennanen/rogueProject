@@ -4,9 +4,12 @@
 
 	
 // Take bullet damage and knockback if stabbed
+if (!pause)
+{
 col = instance_place(x,y,obj_bullet);
 if (col != noone)
 	{
+		if (!awake && awakening = false){awakening = true;alarm[0] = awakeTime};
 		if (stabbed)
 			{
 			stabbed = false;
@@ -14,6 +17,13 @@ if (col != noone)
 			var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
 			hSpd = lengthdir_x(len,dir);
 			vSpd = lengthdir_y(len,dir);
+			}
+			else // Normal knockback
+			{
+			var len = obj_musket.bulletKnockback/mass;
+			var dir = point_direction(obj_musket.x,obj_musket.y,mouse_x,mouse_y)
+			hSpd += lengthdir_x(len,dir);
+			vSpd += lengthdir_y(len,dir);	
 			}
 		hp-=col.damage;
 		obj_stat_system.manaFill+=manaGAIN;
@@ -72,5 +82,4 @@ if (col != noone)
 			if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
 			}
 	}
-
-
+}

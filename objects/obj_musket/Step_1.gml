@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-
+if (obj_player.playerPause = false){
 dir = point_direction(x,y,mouse_x,mouse_y);
 
 
@@ -27,3 +27,4 @@ if (side != image_xscale) {image_xscale += (side-image_xscale)*0.2}
 	var len = 30*side;
 	tipXpos = x+lengthdir_x(len,dir+5*sign(side));
 	tipYpos = y+lengthdir_y(len,dir+5*sign(side));
+	}

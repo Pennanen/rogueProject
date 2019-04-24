@@ -11,6 +11,6 @@ hover = false;
 hovery = 0;
 yy = 0;
 ready = false;
-if (FLOOR % 5 = 0) {stronger = true;DIFFICULTY++}
+if (FLOOR % 3 = 0) {stronger = true;DIFFICULTY++}
 else {stronger = false;}
 y-=400;

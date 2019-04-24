@@ -10,8 +10,5 @@ draw_text(x,y*0.7-355,"FLOOR "+string(FLOOR));
 
 draw_set_font(font0);
 draw_text(x,y*0.7-150,"Choose reward:")
-if (stronger = true) 
-	{
-	draw_text(x,y*0.7-300,"Enemies are growing stronger...");
-	}
+
 draw_set_alpha(1);
