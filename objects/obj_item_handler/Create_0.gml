@@ -2,25 +2,40 @@
 /*
 */
 depth =-499
-diamonds = 0;
+diamonds = 15;
 commonPool = ds_list_create();
 rarePool = ds_list_create();
 uRarePool = ds_list_create();
+shopPoolMinor = ds_list_create();
+shopPoolMajor = ds_list_create();
 
 collectedItems = ds_list_create();
 actives = 0;
-ds_list_add(commonPool,item_orange_syringe,item_orange_syringe);
-ds_list_add(commonPool,item_yellow_syringe,item_yellow_syringe);
-ds_list_add(commonPool,item_red_syringe,item_red_syringe);
+// COMMON
+ds_list_add(commonPool,item_orange_syringe,item_yellow_syringe,item_red_syringe);
 ds_list_shuffle(commonPool);
-
-
+// RARE
 ds_list_add(rarePool,item_black_syringe,item_white_syringe,item_double_up,
-item_gunpowder,item_gelatin_ball,item_gelatin_cube,item_boots);
+item_gunpowder,item_gelatin_ball,item_gelatin_cube,item_boots,item_double_barrel);
 ds_list_shuffle(rarePool);
 
-ds_list_add(uRarePool,item_rainbow_syringe);
+// ULTRA RARE
+ds_list_add(uRarePool,item_triple_barrel,item_rainbow_syringe);
 ds_list_shuffle(uRarePool);
+
+// SHOP
+ds_list_add(shopPoolMinor,item_bomb,item_apple);
+ds_list_add(shopPoolMajor,item_bayonet);
+ds_list_shuffle(shopPoolMinor);
+ds_list_shuffle(shopPoolMajor);
+
+// Backups of full pools
+buCommon = ds_list_create(); ds_list_copy(buCommon,commonPool);
+buRare = ds_list_create(); ds_list_copy(buRare,rarePool);
+buURare = ds_list_create(); ds_list_copy(buURare,uRarePool);
+buMinorShop = ds_list_create();ds_list_copy(buMinorShop,shopPoolMinor);
+buMajorShop = ds_list_create();ds_list_copy(buMajorShop,shopPoolMajor);
+
 
 viewx = camera_get_view_x(view_camera[0]);
 viewy = camera_get_view_y(view_camera[0]);

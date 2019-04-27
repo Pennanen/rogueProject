@@ -23,3 +23,14 @@ if (col > 0 && colList[|0].item != noone && keyboard_check_pressed(ord("F")))
 		else{}
 	}
 }
+// buy items
+col = collision_circle_list(x,y,10,obj_buyable_item,0,0,colList,true);
+if (col > 0 && colList[|0].item != noone && keyboard_check_pressed(ord("F")) && obj_item_handler.diamonds >= colList[|0].cost)
+{
+	for(i=0;i<obj_item_handler.inventorySize;i++)
+	{
+		if (instance_exists(colList[|0].item)){colList[|0].item.amount++;obj_item_handler.diamonds-=colList[|0].cost;instance_destroy(colList[|0]);break;}
+		if (obj_item_handler.invslot[i].item == noone){collectActiveItem(colList[|0].item,obj_item_handler.invslot[i]);obj_item_handler.diamonds-=colList[|0].cost;instance_destroy(colList[|0]);break;}
+		else{}
+	}
+}

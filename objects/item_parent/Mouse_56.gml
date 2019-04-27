@@ -29,7 +29,7 @@ if (dragging && active)
 				obj_slot.alarm[0] = 30;
 			}
 		}
-		else
+		else if (object_index != item_musket)
 		{
 		if (consumable)
 			{

@@ -11,4 +11,4 @@ description = "Impale enemies with bayonet."
 image_index = 0;
 currentSlot = noone;
 cost = 10;
-initialScale = 0.75;
+initialScale = 1;

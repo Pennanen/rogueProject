@@ -8,7 +8,7 @@ globalvar playerHP, playerMAXHP, playerDAMAGE,playerSPEED,manaGAIN,playerDEAD;
 playerDEAD = false;
 playerMAXHP = 1;
 playerHP = playerMAXHP;
-manaGAIN = 1.5;
+manaGAIN = 1;
 canHurt = true;
 hurtTime = 60;
 hurtIndex = 0;
@@ -26,8 +26,9 @@ playerDAMAGE = 1;
 // SPEED
 playerSPEED = 1;
 // BAYONET Upgrade
-globalvar BAYONET,musketKNOCKBACK,bulletSPEED,musketSHOTS;
+globalvar BAYONET,musketKNOCKBACK,bulletSPEED,musketSHOTS,bulletsPerShot;
 BAYONET = false;
+bulletsPerShot = 1;
 musketSHOTS = 1;
 musketKNOCKBACK = 1;
 bulletSPEED = 1;

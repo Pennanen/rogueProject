@@ -31,8 +31,8 @@ if (shaking)
 	targety = obj_player.y+abs(obj_player.vSpd)*obj_player.vSpd*0.15+lengthdir_y(len,dir)-48;
 
 
-camx += (targetx-camx)*0.1;
-camy += (targety-camy)*0.1;
+camx += (targetx-camx)*0.2;
+camy += (targety-camy)*0.2;
 camx = camx+shakeX;
 camy = camy+shakeY;
 camera_set_view_pos(view_camera[0],camx-camw/2,camy-camh/2);
