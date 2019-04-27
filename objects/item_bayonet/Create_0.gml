@@ -8,8 +8,7 @@ event_inherited();
 active = true;
 name = "Bayonet"
 description = "Impale enemies with bayonet."
-image_index = 4;
-currentSlot = obj_item_handler.slot[1];
-currentSlot.item = id;
+image_index = 0;
+currentSlot = noone;
 cost = 10;
 initialScale = 0.75;

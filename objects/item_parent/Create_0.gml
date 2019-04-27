@@ -13,13 +13,17 @@ image_xscale =scale;
 image_yscale =scale;
 hovery = 0;
 active = false;
+
+consumable = false;
+amount = 0;
+destroy = false;
 dragging = false;
 currentSlot = noone;
 
-selectSlotStart = true;
 useScale = 0;
 
 initialScale = 1;
 cost = 0;
 trigger = false;
 canHold = false;
+slotSelected = false;

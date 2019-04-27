@@ -18,8 +18,8 @@ if (shaking)
 	}
 	else
 	{
-	if (shakeX != 0)shakeX += (0-shakeX)*0.1;	
-	if (shakeY != 0)shakeY += (0-shakeY)*0.1;	
+	if (shakeX != 0)shakeX += (0-shakeX)*0.15;	
+	if (shakeY != 0)shakeY += (0-shakeY)*0.15;	
 	}
 
 

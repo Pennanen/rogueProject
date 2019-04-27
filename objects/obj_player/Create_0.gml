@@ -1,6 +1,7 @@
 /// @description
 /*
 */
+colList = ds_list_create();
 grav = 0.7;
 
 vSpd = 0;
@@ -22,6 +23,7 @@ playerPause = false;
 onGround = false;
 instance_create_depth(x,y,depth-1,obj_musket);
 instance_create_depth(x,y,depth-1,obj_camera);
+duck = false;
 
 //Keys
 keyLeft = false;
@@ -36,6 +38,8 @@ idleImage = spr_player_idle_32;
 runImage = spr_player_run;
 jumpImage1 = spr_player_jump_2;
 jumpImage2 = spr_player_jump;
+duckImage = spr_player_duck
 currentImage = idleImage;
 animationIndex = 0;
 animationSpeed = 0.5;
+image_speed = 0;

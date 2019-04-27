@@ -12,8 +12,9 @@ slotTrigger = false;
 disabled = false;
 hover =false;
 
+
 keyIcon = spr_keyicons;
-keyIndex = 0;
+keyIndex = -1;
 
 x1 = 0;
 y1 = 0;

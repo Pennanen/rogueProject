@@ -32,7 +32,8 @@ else if (!impale)
 	var	kickPowerx = lengthdir_x(reloadSpd*1*side/2,dir);
 	var	kickPowery = lengthdir_y(reloadSpd*1*side/2,dir);
 	x += ((obj_player.x+side*8)-x)*0.4+kickPowerx;
-	y = obj_player.y-3+kickPowery*3;
+	if (obj_player.duck){y = obj_player.y+3+kickPowery*3;}
+	else{y = obj_player.y-3+kickPowery*3;}
 	}
 	
 
@@ -72,7 +73,7 @@ else if (kick)
 reloadDir+=reloadSpd;
 if (canFire)
 	{
-	if (reloadSpd > 0.3){reloadSpd+=(0-reloadSpd)*0.3}else{reloadSpd = 0}
+	if (reloadSpd > 0.3){reloadSpd+=(0-reloadSpd)*0.5}else{reloadSpd = 0}
 	if (reloadDir > 340 && reloadDir < 380) {recoverSpd = 0;reloadDir = 0;}
 	else if (reloadDir > 360) {recoverSpd+=0.5;reloadDir-=recoverSpd;}
 	sprite_index = spr_musket;

@@ -28,7 +28,7 @@ if (mouse_x > x1 && mouse_x < x2 && mouse_y > y1 && mouse_y < y2 || obj_player.y
 		disabled = false;
 	}
 
-if (!disabled)
+if (!disabled && keyIndex != -1)
 {
 if (instance_exists(item) && item.canHold)
 {

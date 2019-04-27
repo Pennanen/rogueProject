@@ -2,7 +2,7 @@
 /*
 */
 pause = false;
-maxHp = 5+DIFFICULTY*2;
+maxHp = 5+DIFFICULTY;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;
@@ -13,7 +13,7 @@ stabbed = false;
 hAcc = 0.18;
 canImpale = true;
 spinDir = 0;
-mass = 1.25;
+mass = 1.24;
 spriteIndex = spr_spinner;
 imageIndex = 0;
 onGround = false;

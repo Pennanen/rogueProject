@@ -1,7 +1,11 @@
 /// @description
 /*
-*/
-	
+*/  if (destroy){currentSlot.item = noone;instance_destroy()}
+	if (consumable && trigger)
+		{
+		if (amount <= 1){destroy = true};	
+		else {amount--};
+		}
 	if (hover && !mouse_check_button(mb_left))
 		{
 		scale += (2-scale)*0.2;

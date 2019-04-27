@@ -3,6 +3,7 @@
 */
 if (dragging && active)
 	{
+	obj_musket.shoot = false;
 	if (place_meeting(mouse_x,mouse_y,obj_slot))
 		{
 		s = collision_point(mouse_x,mouse_y,obj_slot,0,0);
@@ -30,7 +31,21 @@ if (dragging && active)
 		}
 		else
 		{
-			
+		if (consumable)
+			{
+				repeat(amount)
+					{
+						dropitem = instance_create_depth(obj_player.x,obj_player.y-10,depth,obj_collectible_item);
+						dropitem.item = object_index;
+					}
+			}
+			else
+			{
+		dropitem = instance_create_depth(obj_player.x,obj_player.y-10,depth,obj_collectible_item);
+		dropitem.item = object_index;
+			}
+		currentSlot.item = noone;
+		instance_destroy();
 		}
 		dragging = false;
 		obj_musket.disabled = false;

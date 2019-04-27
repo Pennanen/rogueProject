@@ -2,6 +2,7 @@
 /*
 */
 //Offsets for collision
+if (duck) {image_index = 1;}else{image_index = 0}
 var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
 var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index);
 var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
@@ -42,10 +43,13 @@ else // Player not paused
 	if (keyUpHold && vSpd < 0 && !onGround){}
 	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
+	if (onGround && keyDown) {duck = true}
+	else if (!place_meeting(x,y-8,obj_solid)){duck = false};
 	vSpd+=grav;
 	vSpd = clamp(vSpd,-maxRiseSpd,maxFallSpd);
 	// Collision
 	//Horizontal collisions
+	if (duck) {hSpd /= 1.3}
 	x += hSpd;
 
 	//Snap

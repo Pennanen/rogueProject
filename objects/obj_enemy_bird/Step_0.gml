@@ -10,7 +10,7 @@ if (changePos = 1)
 	//find new pos
 	if (multi = 1){var diste = 16}
 	else{var diste = choose(16,16,16,32,32,32)*multi;}
-		var tryDir = irandom_range(30,150);
+		var tryDir = irandom_range(0,360);
 		//tryDir += irandom_range(-90,90);
 		var tryX = obj_player.x+lengthdir_x(diste,tryDir);
 		var tryY = obj_player.y+lengthdir_y(diste,tryDir);
@@ -38,8 +38,8 @@ else if (changePos = 2)
 	}
 else if (changePos = 0)
 	{
-	hSpd += (0-hSpd)*0.05;
-	vSpd += (0-vSpd)*0.05;	
+	hSpd += (0-hSpd)*0.03;
+	vSpd += (0-vSpd)*0.03;	
 	}
 }
 else if (stabbed){changePos = 1}

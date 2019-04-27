@@ -9,7 +9,11 @@ for(i=0;i<4;i++)
 	slot[i].x = activex[i];	
 	slot[i].y = activey[i];	
 	}
-
+for(i=0;i<inventorySize;i++)
+	{
+	invslot[i].x = invx[i];	
+	invslot[i].y = invy[i];	
+	}
 
 if (ds_list_size(collectedItems)>0)
 	{

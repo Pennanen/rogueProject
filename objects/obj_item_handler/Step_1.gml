@@ -19,3 +19,9 @@ activey[2] = viewy+viewh-32;
 
 activex[3] = viewx+vieww/2+81;
 activey[3] = viewy+viewh-32;
+
+for(i=0;i<inventorySize;i++)
+{
+invx[i] = viewx+vieww/2-230+i*44;
+invy[i] = viewy+viewh-32;
+}

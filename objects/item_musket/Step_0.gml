@@ -1,7 +1,8 @@
 /// @description
 /*
 */
-
+if (slotSelected)
+{
 // Inherit the parent event
 event_inherited();
 
@@ -23,3 +24,4 @@ if (trigger)
 		}
 	trigger = false;
 	}
+}

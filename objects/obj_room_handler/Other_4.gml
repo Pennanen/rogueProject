@@ -30,6 +30,15 @@ if (global.wastedManaCells > 0)
 		instance_create_depth(obj_player.x,64,0,obj_mana_cell);
 		}
 	global.wastedManaCells = 0;
+	}
+if (ds_list_size(wastedItems) > 0)
+	{
+	for(i=0;i<ds_list_size(wastedItems);i++)
+		{
+		o = instance_create_depth(obj_player.x,64,0,obj_collectible_item);
+		o.item = ds_list_find_value(wastedItems,i);
+		}
+	ds_list_clear(wastedItems);
 	}	
 //Section musics
 /*

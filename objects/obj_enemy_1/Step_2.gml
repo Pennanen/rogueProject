@@ -29,7 +29,18 @@ if (col != noone)
 		obj_stat_system.manaFill+=manaGAIN;
 		instance_destroy(col,true);
 	}	
-	
+col = instance_place(x,y,obj_explosion_red);
+if (col != noone)
+	{
+		if (!awake && awakening = false){awakening = true;alarm[0] = awakeTime};
+
+			var len = 22/mass;
+			var dir = point_direction(col.x,col.y,x,y-160)
+			hSpd += lengthdir_x(len,dir);
+			vSpd += lengthdir_y(len,dir);	
+
+		hp-=col.damage;
+	}		
 	//collision
 	var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
 	var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index);

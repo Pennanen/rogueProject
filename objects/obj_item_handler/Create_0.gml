@@ -16,7 +16,7 @@ ds_list_shuffle(commonPool);
 
 
 ds_list_add(rarePool,item_black_syringe,item_white_syringe,item_double_up,
-item_gunpowder,item_gelatin_ball,item_gelatin_cube,item_boots,item_bayonet);
+item_gunpowder,item_gelatin_ball,item_gelatin_cube,item_boots);
 ds_list_shuffle(rarePool);
 
 ds_list_add(uRarePool,item_rainbow_syringe);
@@ -41,16 +41,25 @@ slot[3] = instance_create_depth(x,y,-500,obj_slot);
 slot[3].slotKey = ord("E");
 slot[3].keyIndex = 3;
 
-activex[0] = 0;
-activey[0] = 0;
+inventorySize = 3;
+for(i=0;i<inventorySize;i++)
+{
+invslot[i] = instance_create_depth(x,y,-500,obj_inv_slot);	
+}
 
-activex[1] = 0;
-activey[1] = 0;
+//Alusta active positiot
+for(i=0;i<4;i++)
+{
+activex[i] = 0;
+activey[i] = 0;
+}
 
-activex[2] = 0;
-activey[2] = 0;
+// Alusta inventory positiot
+for(i=0;i<inventorySize;i++)
+{
+invx[i] = 0;
+invy[i] = 0;
+}
 
-activex[3] = 0;
-activey[3] = 0;
 
 alarm[0] = 1;

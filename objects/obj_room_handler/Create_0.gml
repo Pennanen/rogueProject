@@ -10,6 +10,8 @@ DIFFICULTY = 0;
 global.wastedDiamonds = 0;
 global.wastedManaCells = 0;
 
+wastedItems = ds_list_create();
+
 loadRooms();
 
 globalvar music,sectionMusic, audioGlobalGain;

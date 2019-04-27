@@ -1,17 +1,21 @@
 /// @description
 /*
 */
-if (shoot && !disabled && obj_player.playerPause = false)
+if (shoot && !disabled && obj_player.playerPause = false && !instance_position(mouse_x,mouse_y,obj_slot))
 	{
 	shotsAvailable--;
-	bullet = instance_create_depth(tipXpos,tipYpos,depth+1,obj_bullet);
-	instance_create_depth(tipXpos,tipYpos,depth-1,obj_muzzle);
+	var len = 30;
+	var dire = point_direction(x,y,mouse_x,mouse_y);
+	var	tempBulletTipx = x+lengthdir_x(len,dire);
+	var	tempBulletTipy = y+lengthdir_y(len,dire);
+	bullet = instance_create_depth(tempBulletTipx,tempBulletTipy,depth+1,obj_bullet);
+	instance_create_depth(tempBulletTipx,tempBulletTipy,depth-1,obj_muzzle);
 	bullet.dir = point_direction(x,y,mouse_x,mouse_y);
-	camShake(1,bullet.dir+180,3);
+	camShake(1,bullet.dir+180,4);
 	canFire = false;
 	if (shotsAvailable = 0){reloading = true;audio_play_sound(snd_reload,0,0)}
 	else{kick = true;reloadDir = 360;audio_play_sound(snd_stab,0,0);};
-	recoverSpd = -5;
+	recoverSpd =5;
 	obj_player.hSpd += lengthdir_x(-knockback*2,bullet.dir);
 	obj_player.vSpd += lengthdir_y(-knockback,bullet.dir);
 	audio_play_sound(snd_shoot,0,0);
