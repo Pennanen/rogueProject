@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-if (dragging && active)
+if (dragging && active && collect)
 	{
 	obj_musket.shoot = false;
 	if (place_meeting(mouse_x,mouse_y,obj_slot))

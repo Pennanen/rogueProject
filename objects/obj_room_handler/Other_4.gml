@@ -23,6 +23,14 @@ if (global.wastedDiamonds > 0)
 		}
 	global.wastedDiamonds = 0;
 	}
+if (global.wastedKeys > 0)
+	{
+	repeat(global.wastedKeys)
+		{
+		instance_create_depth(obj_player.x,64,0,obj_key);
+		}
+	global.wastedKeys = 0;
+	}
 if (global.wastedManaCells > 0)
 	{
 	repeat(global.wastedManaCells)

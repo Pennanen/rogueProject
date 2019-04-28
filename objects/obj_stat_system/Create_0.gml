@@ -14,10 +14,17 @@ hurtTime = 60;
 hurtIndex = 0;
 manaReal = 40;
 
-manaIndex1 = 10;
-manaIndex2 = 10;
-manaIndex3 = 10;
-manaIndex4 = 10;
+manaIndex1 = 5;
+manaIndex2 = 5;
+manaIndex3 = 5;
+manaIndex4 = 5;
+
+manaIndex5 = 5;
+manaIndex6 = 5;
+manaIndex7 = 5;
+manaIndex8 = 5;
+
+
 canFill = true;
 manaMAX = 40;
 manaFill = 0;

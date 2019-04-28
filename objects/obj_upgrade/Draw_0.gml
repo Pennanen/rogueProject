@@ -3,18 +3,9 @@
 */
 draw_sprite_ext(sprite_index,image_index,x,y-hovery,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 if (item != noone){
-	if (currentPool = obj_item_handler.uRarePool)
-	{
-	draw_sprite_ext(spr_upgrade_icons_urare,item.image_index,x,y-hovery,image_xscale*1,image_yscale*1,image_angle,c_white,image_alpha);
-	}
-	else if (currentPool = obj_item_handler.rarePool)
-	{
-	draw_sprite_ext(spr_upgrade_icons_rare,item.image_index,x,y-hovery,image_xscale*1,image_yscale*1,image_angle,c_white,image_alpha);
-	}
-	else
-	{
-	draw_sprite_ext(spr_upgrade_icons,item.image_index,x,y-hovery,image_xscale*1,image_yscale*1,image_angle,c_white,image_alpha);	
-	}
+
+	draw_sprite_ext(item.sprite_index,item.image_index,x,y-hovery,image_xscale*1,image_yscale*1,image_angle,c_white,image_alpha);
+
 }
 if (hover)
 	{

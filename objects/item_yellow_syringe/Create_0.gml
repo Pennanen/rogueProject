@@ -5,6 +5,6 @@
 // Inherit the parent event
 event_inherited();
 
-name = "Blue Syringe"
-description = "Speed Up"
-image_index = 2;
+name = "Yellow Syringe"
+description = "Damage Up"
+image_index = 0;

@@ -8,6 +8,7 @@ event_inherited();
 if (collected = false && collect)
 	{
 	image_alpha = 1;
-	playerSPEED+=0.5;
+	playerDAMAGE=playerDAMAGE+playerDAMAGE*0.25;
+
 	collected = true;
 	}

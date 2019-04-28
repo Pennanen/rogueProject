@@ -36,20 +36,29 @@ else // Player not paused
 	//Movement
 	if (keyLeft && !keyRight && hSpd > -hSpdMax){hSpd -= hAcc;image_xscale = -1}
 	if (keyRight && !keyLeft && hSpd < hSpdMax){hSpd += hAcc;image_xscale = 1}
-	if (keyUp && onGround){vSpd -= jumpSpd;}
-	if (keyUp && jumpSave > 1){vSpd -= jumpSpd;jumpSave = 1}
+	if (keyUp && onGround && jumpSave > 1){vSpd -= jumpSpd;jumpSave = 1;}
+	
+	if (keyUp && !onGround && jumpSave > 1 || !onGround && keyUp && inWater){vSpd = -jumpSpd;jumpSave = 1}
 	else if (keyUp && !onGround && doubleJumped = false && playerDOUBLEJUMP){vSpd = -jumpSpd;doubleJumped = true}
 	// Variable jump and gravity control
-	if (keyUpHold && vSpd < 0 && !onGround){}
+	if (keyUpHold && vSpd < 0 && !onGround){}//normal
 	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
 	if (onGround && keyDown) {duck = true}
 	else if (!place_meeting(x,y-8,obj_solid)){duck = false};
 	vSpd+=grav;
-	vSpd = clamp(vSpd,-maxRiseSpd,maxFallSpd);
+	if (inWater)
+		{
+		vSpd = clamp(vSpd,-maxRiseSpd,2);
+		}
+		else
+		{
+		vSpd = clamp(vSpd,-maxRiseSpd,maxFallSpd);
+		}
 	// Collision
 	//Horizontal collisions
 	if (duck) {hSpd /= 1.3}
+	hSpd = hSpd/hSpdResistance;
 	x += hSpd;
 
 	//Snap

@@ -8,6 +8,7 @@ globalvar FLOOR, DIFFICULTY;
 FLOOR = -1;
 DIFFICULTY = 0;
 global.wastedDiamonds = 0;
+global.wastedKeys = 0;
 global.wastedManaCells = 0;
 
 wastedItems = ds_list_create();

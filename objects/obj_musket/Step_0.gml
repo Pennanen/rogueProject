@@ -37,7 +37,7 @@ if (shoot && !disabled && obj_player.playerPause = false && !instance_position(m
 	
 if (BAYONET)
 {
-if (stab && obj_player.playerPause = false)
+if (stab && obj_player.playerPause = false && !instance_position(mouse_x,mouse_y,obj_slot))
 	{
 	stabDamage = playerDAMAGE;
 	alarm[1] = 3;

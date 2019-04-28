@@ -7,4 +7,4 @@ event_inherited();
 
 name = "Brown Boots"
 description = "Hipity hop!"
-image_index = 5;
+image_index = 0;

@@ -7,4 +7,4 @@ event_inherited();
 
 name = "Double Barrel"
 description = "Shoot additional bullet."
-image_index = 8;
+image_index = 0;

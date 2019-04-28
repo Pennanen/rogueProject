@@ -1,6 +1,8 @@
 /// @description
 /*
-*/  if (destroy){currentSlot.item = noone;instance_destroy()}
+*/  
+if (collect){
+if (destroy){currentSlot.item = noone;instance_destroy()}
 	if (consumable && trigger)
 		{
 		if (amount <= 1){destroy = true};	
@@ -20,7 +22,7 @@
 	image_xscale =scale*initialScale;
 	image_yscale =scale*initialScale;
 	
-	if (active && !dragging)
+	if (active && !dragging && instance_exists(currentSlot))
 		{
 			x = currentSlot.x;
 			y = currentSlot.y;
@@ -33,3 +35,8 @@
 			x = mouse_x;
 			y = mouse_y;
 		}
+}
+else
+{
+	exit;
+}

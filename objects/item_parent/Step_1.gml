@@ -1,9 +1,11 @@
 /// @description
 /*
 */
+if (collect)
+{
 if (active && slotSelected || !active)
 {
-if(active && currentSlot.item = noone){currentSlot.item = id;}
+if(instance_exists(currentSlot) && active && currentSlot.item = noone){currentSlot.item = id;}
 if(position_meeting(mouse_x, mouse_y, id))
 	{
 	if (hover = false){alarm[1] = 15;hover = true}
@@ -25,4 +27,5 @@ if (active && trigger)
 	{
 	useScale = 0;	
 	}
+}
 }

@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+if (collect)
+{
 draw_sprite_ext(sprite_index,image_index,x,y+hovery,image_xscale+useScale,image_yscale+useScale,image_angle,image_blend,image_alpha)
 if (showText && !dragging)
 	{
@@ -14,7 +16,7 @@ if (showText && !dragging)
 			draw_text(x,y-105,description);
 			if (object_index = item_musket) {draw_text(x,y-85,"Refills action points.");}
 			else if (cost > 0)
-			{draw_text(x,y-85,"Cost: "+string(cost/10) + " action points!");}
+			{draw_text(x,y-85,"Cost: "+string(cost/5) + " action points!");}
 			else if (consumable)
 			{
 				draw_text(x,y-85,"Consumable");
@@ -32,3 +34,4 @@ if (consumable)
 	draw_set_color(c_white);
 	draw_text(x+12,y+12,string(amount))	
 	}
+}
