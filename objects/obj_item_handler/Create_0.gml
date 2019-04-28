@@ -2,8 +2,8 @@
 /*
 */
 depth =-499
-diamonds = 15;
-keys = 0;
+diamonds = 0;
+keys = 1;
 commonPool = ds_list_create();
 rarePool = ds_list_create();
 uRarePool = ds_list_create();

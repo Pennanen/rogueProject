@@ -1,7 +1,8 @@
 /// @description
 /*
 */
-
+immune = true;
+alarm[0] = 15;
 grav = 0.5;
 vSpd = -5;
 hSpd = random_range(-1,1);

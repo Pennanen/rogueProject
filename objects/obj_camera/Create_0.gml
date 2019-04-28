@@ -13,6 +13,10 @@ targetx = x;
 targety = y;
 camx = x;
 camy = y;
+realShake= false;
+shakeXReal = 0;
+shakeYReal = 0;
+shakePowerReal = 0;
 
 shakeX = 0;
 shakeY = 0;

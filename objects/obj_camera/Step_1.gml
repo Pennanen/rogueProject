@@ -21,7 +21,11 @@ if (shaking)
 	if (shakeX != 0)shakeX += (0-shakeX)*0.15;	
 	if (shakeY != 0)shakeY += (0-shakeY)*0.15;	
 	}
-
+if (realShake)
+	{
+	shakeXReal = irandom_range(-shakePowerReal,shakePowerReal);	
+	shakeYReal = irandom_range(-shakePowerReal,shakePowerReal);	
+	}
 
 //targetx = room_width/2+(obj_player.x-room_width/2)/1.6;
 
@@ -33,8 +37,8 @@ if (shaking)
 
 camx += (targetx-camx)*0.2;
 camy += (targety-camy)*0.2;
-camx = camx+shakeX;
-camy = camy+shakeY;
+camx = camx+shakeX+shakeXReal;
+camy = camy+shakeY+shakeYReal;
 camera_set_view_pos(view_camera[0],camx-camw/2,camy-camh/2);
 bg_x = camx/10;
 bg_y = camy/10;

@@ -7,6 +7,7 @@ if (awake && !stabbed && !pause)
 if (obj_player.x > x && hSpd < hSpdMax){hSpd += hAcc}
 if (obj_player.x < x && hSpd > -hSpdMax){hSpd -= hAcc}
 spinDir += -hSpd;
+if (inWater){spinDir+=-17*sign(obj_player.x-x);}
 spinDir += -7*sign(obj_player.x-x);
 if (place_meeting(x+24,y+4,obj_solid) && obj_player.x > x){vSpd = -4};
 if (place_meeting(x-24,y+4,obj_solid) && obj_player.x < x){vSpd = -4};

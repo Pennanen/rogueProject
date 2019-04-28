@@ -2,7 +2,7 @@
 /*
 */
 pause = false;
-maxHp = 3+DIFFICULTY*2;
+maxHp = 3+DIFFICULTY*1.1;
 hp = maxHp;
 vSpd = 0;
 hSpd = 0;

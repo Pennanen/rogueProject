@@ -1,4 +1,4 @@
-depth = -10;
+depth = -49;
 x1 = x;
 x2 = x+sprite_width;
 y1 = y;

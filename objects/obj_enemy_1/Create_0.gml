@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-
+inWater = false;
 pause = false;
 name = "parent"
 maxHp = 4+DIFFICULTY*2;
@@ -27,7 +27,7 @@ awakeTime = 15; // smaller than 10 leaves hpAlpha too low
 awakening = false;
 smacked = false;
 onGround = false;
-depth = -59;
+depth = -48;
 breakFree = 0;
 flying = false;
 

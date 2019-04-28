@@ -16,17 +16,26 @@ if (inWater){hSpdResistance = 1.5;}else{hSpdResistance = 1;}
 if (onGround){doubleJumped = false;jumpSave =3;}
 if (jumpSave = 3 && !onGround) {alarm[0]=15;jumpSave = 2};
 
+col = collision_circle_list(x,y,20,parent_interact,0,0,colList,true);
 
 // Collect items
-col = collision_circle_list(x,y,10,obj_collectible_item,0,0,colList,true);
-if (col > 0 && colList[|0].item != noone && keyboard_check_pressed(ord("F")))
+if (col > 0 && colList[|0].object_index = obj_collectible_item  && colList[|0].item != noone && keyboard_check_pressed(ord("F")))
 {
+	camShakeReal(2,5);
 	if(collectActiveItem(colList[|0].item)){instance_destroy(obj_player.colList[|0]);};
 }
 
 // buy items
-col = collision_circle_list(x,y,10,obj_buyable_item,0,0,colList,true);
-if (col > 0 && colList[|0].item != noone && keyboard_check_pressed(ord("F")) && obj_item_handler.diamonds >= colList[|0].cost)
+else if (col > 0 && colList[|0].object_index = obj_buyable_item && colList[|0].item != noone && keyboard_check_pressed(ord("F")) && obj_item_handler.diamonds >= colList[|0].cost)
 {
+	camShakeReal(2,15);
 	if (collectActiveItem(colList[|0].item)){obj_item_handler.diamonds-=colList[|0].cost;instance_destroy(obj_player.colList[|0]);};
+}
+
+//chests
+else if (col > 0 && colList[|0].object_index = obj_chest && !colList[|0].open  && keyboard_check_pressed(ord("F")) && obj_item_handler.keys >= colList[|0].cost)
+{
+	camShakeReal(2,25);
+	colList[|0].open = true;
+	obj_item_handler.keys--;
 }

@@ -15,7 +15,7 @@ if (!place_meeting(x,y+1,obj_solid))
 		y+=vSpd;
 		x+=hSpd;
 		}
-if (place_meeting(x,y-1,obj_player))
+if (place_meeting(x,y-1,obj_player) && !immune)
 	{
 	obj_item_handler.diamonds+=1;
 	instance_destroy();

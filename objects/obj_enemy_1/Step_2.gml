@@ -40,7 +40,13 @@ if (col != noone)
 			vSpd += lengthdir_y(len,dir);	
 
 		hp-=col.damage;
-	}		
+	}
+	if (inWater)
+		{
+			hSpd = hSpd/2
+			vSpd = clamp(vSpd,-8,2);
+		};
+	
 	//collision
 	var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
 	var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index);

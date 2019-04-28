@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-
+inWater = collision_rectangle(x-15,y-15,x+15,y+1,obj_water,true,0);
 if (!awake && obj_player.y > y-32 && awakening = false || !awakening && !awake && point_distance(obj_player.x,obj_player.y,x,y)< awakeDistance){awakening = true;alarm[0] = awakeTime};
 
 else if (awakening)
