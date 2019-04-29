@@ -14,28 +14,7 @@ if (spriteGot = false && item != noone)
 	sprite_index = object_get_sprite(item);
 	spriteGot = true;	
 	}
-if (!place_meeting(x,y+1,obj_solid))
-	{
-	vSpd += grav;
-	x+=hSpd;	
-	y+=vSpd;
-	}
-	else if (bounces > 0)
-		{
-		bounces--;
-		vSpd = -vSpd/1.5;
-		y+=vSpd;
-		x+=hSpd;
-		}
-		/*
-if (collision_line(x,y,x,y-10,obj_player,0,0) && item != noone && keyboard_check_pressed(ord("F")))
-{
-	for(i=0;i<obj_item_handler.inventorySize;i++)
-	{
-		if (obj_item_handler.invslot[i].item == noone){collectActiveItem(item,obj_item_handler.invslot[i]);instance_destroy();}
-		else{}
-	}
-}*/
+
 if (obj_player.colList[|0] == id && item != noone)
 {
 	if (buttonAlpha < 1){buttonAlpha +=0.2}else{buttonAlpha = 1}
@@ -51,5 +30,31 @@ if (y > room_height+100 && savedForNext = false)
 		savedForNext =true;
 	}
 
-if (place_meeting(x+3,y-4,obj_solid))x--;
-if (place_meeting(x-3,y-4,obj_solid))x++;
+
+
+
+if (!place_meeting(x,y+3,obj_solid) && !tile_meeting(x,y+sprite_height/2-3,tilemap))
+	{
+	x+=hSpd;	
+	y+=vSpd;
+	vSpd += grav;
+	image_angle += (hSpd*4-image_angle)*0.3;
+	}
+	else if (bounces > 0 || vSpd > 1)
+		{
+		bounces--;
+		if (vSpd < 2){vSpd = 2}
+		vSpd = -vSpd/2;
+		y+=vSpd;
+		x+=hSpd;
+		hSpd = hSpd*(0.5+bounces*0.1);
+		image_angle += (hSpd*4-image_angle)*0.3;
+		}
+		else
+		{
+		image_angle += (0-image_angle)*0.3;
+		}
+
+if (place_meeting(x,y-10,obj_solid)&&vSpd < 0 || vSpd < 0 && tile_meeting(x,y-sprite_height/2-1,tilemap)){vSpd*=-1;}
+if (place_meeting(x+5,y-9,obj_solid) || tile_meeting(x+5,y-sprite_height/2+4,tilemap)){x--;hSpd *= -0.2;}
+if (place_meeting(x-5,y-9,obj_solid) || tile_meeting(x-5,y-sprite_height/2+4,tilemap)){x++;hSpd *= -0.2;}

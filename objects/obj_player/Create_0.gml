@@ -1,6 +1,9 @@
 /// @description
 /*
 */
+lay_id = layer_get_id("Tiles_1");
+tilemap = layer_tilemap_get_id(lay_id);
+
 colList = ds_list_create();
 grav = 0.7;
 inWater =false;
@@ -23,8 +26,11 @@ gDamp = 0.8;
 
 playerPause = false;
 onGround = false;
+if (room != room_chunkRoom)
+{
 instance_create_depth(x,y,depth-1,obj_musket);
 instance_create_depth(x,y,depth-1,obj_camera);
+}
 duck = false;
 
 //Keys

@@ -14,8 +14,10 @@ else if (awakening)
 	
 	if (hp <= 0){instance_destroy();}
 	
-	
-	onGround = collision_line(x,y,x,y+sprite_height/2+2,obj_solid,0,true);
+var t1 = tile_meeting(bbox_left,bbox_bottom+3,tilemap) & tile_index_mask;
+var t2 = tile_meeting(bbox_right,bbox_bottom+3,tilemap) & tile_index_mask;
+if (t1 != 0 || t2!=0 || collision_rectangle(x-15,y+15,x+15,y+22,obj_solid,true,0)) {onGround = true}
+else if (onGround != false){onGround = false};
 	
 	// Deal damage to player
 if (place_meeting(x,y,obj_player) && !stabbed)

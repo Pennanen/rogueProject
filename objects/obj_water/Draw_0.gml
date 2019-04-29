@@ -1,4 +1,5 @@
-
+if (init = true)
+{
 draw_set_color(c_white);
 draw_set_alpha(waterAlpha);
 
@@ -31,4 +32,4 @@ draw_set_alpha(waterAlpha);
 draw_set_alpha(1);
 draw_set_color(c_white);
 
-
+}

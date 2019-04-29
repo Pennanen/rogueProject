@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-
+event_inherited()
 grav = 0.5;
 vSpd = 0;
 hSpd = 0;

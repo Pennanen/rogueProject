@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+lay_id = layer_get_id("Tiles_1");
+tilemap = layer_tilemap_get_id(lay_id);
 pause = false;
 maxHp = 4+DIFFICULTY;
 hp = maxHp;

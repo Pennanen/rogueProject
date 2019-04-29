@@ -8,7 +8,7 @@
             "id": "c1f1bb5e-5c37-4e6a-8e0f-1445b6a8cea0",
             "modelName": "GMAutoTileSet",
             "mvc": "1.0",
-            "closed_edge": false,
+            "closed_edge": true,
             "name": "autotile_1",
             "tiles": [
                 160,
@@ -64,7 +64,7 @@
             "id": "14dcff83-04fb-4ab4-96a2-a74de10f65f5",
             "modelName": "GMAutoTileSet",
             "mvc": "1.0",
-            "closed_edge": false,
+            "closed_edge": true,
             "name": "autotile_2",
             "tiles": [
                 148,
@@ -120,7 +120,7 @@
             "id": "c9a7b178-3527-4901-9c8e-bf6ab916e379",
             "modelName": "GMAutoTileSet",
             "mvc": "1.0",
-            "closed_edge": false,
+            "closed_edge": true,
             "name": "autotile_3",
             "tiles": [
                 16,

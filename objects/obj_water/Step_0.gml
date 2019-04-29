@@ -1,3 +1,5 @@
+if (init = true && room != room_chunkRoom && instance_exists(obj_player))
+{
 showBelow = obj_player.inWater;
 if (showBelow && waterAlpha > alpha) {waterAlpha-=0.01}
 else if (!showBelow && waterAlpha < maxAlpha) {waterAlpha+=0.01}
@@ -50,3 +52,4 @@ if (wavePoint[i,0] <= y1-dampening){wavePoint[i,1] += dampening;}
 }
 }
 if (!collision_rectangle(x1,y1+2,x2,y2,obj_player,0,0)){notInWater = true}
+}

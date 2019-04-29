@@ -23,6 +23,3 @@ if (y > room_height+100 && savedForNext = false)
 		ds_list_add(obj_room_handler.wastedItems,item);
 		savedForNext =true;
 	}
-
-if (place_meeting(x+3,y-4,obj_solid))x--;
-if (place_meeting(x-3,y-4,obj_solid))x++;

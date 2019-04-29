@@ -2,7 +2,8 @@
 /*
 */
 
-
+if (room != room_chunkRoom && instance_exists(obj_player))
+{
 if (open && image_index < 9)
 {
 	image_index+=1;
@@ -24,4 +25,5 @@ if (open && !itemSpawned)
 {
 	alarm[0] = 3;
 	itemSpawned = true;
+}
 }

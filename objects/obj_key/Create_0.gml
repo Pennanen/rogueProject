@@ -1,6 +1,7 @@
 /// @description
 /*
 */
+event_inherited()
 immune = true;
 alarm[0] = 15;
 grav = 0.5;

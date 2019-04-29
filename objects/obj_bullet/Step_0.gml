@@ -1,7 +1,8 @@
 /// @description
 /*
 */
-if (collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_solid,1,0))
+if (collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_solid,1,0)
+	||tile_meeting(x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),tilemap))
 {
 	var xx = x+lengthdir_x(spd,dir)/2;
 	var yy = y+lengthdir_y(spd,dir)/2;

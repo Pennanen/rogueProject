@@ -43,8 +43,8 @@ if (col != noone)
 	}
 	if (inWater)
 		{
-			hSpd = hSpd/2
-			vSpd = clamp(vSpd,-8,2);
+			hSpd = hSpd/1.2
+			vSpd = clamp(vSpd,-9,3);
 		};
 	
 	//collision
@@ -53,10 +53,41 @@ if (col != noone)
 	var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
 	var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index);
 	
-	//Horizontal collisions
 	x += hSpd;
-
-	//Snap
+	//Tile
+	if (hSpd > 0)
+		{
+		var t1 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			x = ((bbox_right & ~31)-1) - sprite_bbox_right;
+			hSpd = 0;
+			if (stabbed)
+				{
+				var tipx = obj_musket.tipXpos;
+				var tipy = obj_musket.tipYpos;
+				if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
+				}
+			}
+		}
+		else
+		{
+		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			x = ((bbox_left + 32) & ~31) - sprite_bbox_left;
+			hSpd = 0;
+			if (stabbed)
+				{
+				var tipx = obj_musket.tipXpos;
+				var tipy = obj_musket.tipYpos;
+				if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
+				}
+			}
+		}
+	//Object
 	if place_meeting(x+sign(hSpd),y,obj_solid) 
 	{
 		var wall = instance_place(x+sign(hSpd),y,obj_solid);
@@ -75,11 +106,46 @@ if (col != noone)
 			var tipy = obj_musket.tipYpos;
 			if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
 			}
+		
 	}
-	
 	//Vertical collisions
 	y+=vSpd;
-	//Snap
+	//Tile
+	if (vSpd > 0)
+		{
+		var t1 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
+			vSpd = 0;
+			if (stabbed)
+				{
+				var tipx = obj_musket.tipXpos;
+				var tipy = obj_musket.tipYpos;
+				if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
+				}
+			}
+		}
+		else
+		{
+		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			y = ((bbox_top + 32) & ~31) - sprite_bbox_top;
+			vSpd = 0;
+			if (stabbed)
+				{
+				var tipx = obj_musket.tipXpos;
+				var tipy = obj_musket.tipYpos;
+				if (point_distance(x,y,tipx,tipy)>stabThreshold && breakFree = 0){alarm[2] = 1;breakFree = 1;}
+				}
+			}
+		}
+
+
+	//Object
 	if place_meeting(x,y+sign(vSpd),obj_solid) 
 	{
 		var wall = instance_place(x,y+sign(vSpd),obj_solid);

@@ -1,11 +1,13 @@
 /// @description
 /*
 */
-
+bottomLine = room_height+500;
+if (room != room_chunkRoom && instance_exists(obj_player))
+{
 FLOOR++;
 if (room != room_start)
 	{
-	obj_player.y = topLine;
+	//obj_player.y = topLine;
 	if (!fork){obj_player.playerPause = true;alarm[0] = 15;}
 	else {fork = false;}
 	setCamPos(obj_camera.targetx,obj_player.y);
@@ -56,4 +58,4 @@ switch(FLOOR)
 	case 20: sectionMusic = music;break;
 	//....
 	}*/
-	
+}

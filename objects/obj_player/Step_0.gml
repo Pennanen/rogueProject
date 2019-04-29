@@ -45,7 +45,7 @@ else // Player not paused
 	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
 	if (onGround && keyDown) {duck = true}
-	else if (!place_meeting(x,y-8,obj_solid)){duck = false};
+	else if (!tile_meeting(x,y-8,tilemap) && !place_meeting(x,y-8,obj_solid)){duck = false};
 	vSpd+=grav;
 	if (inWater)
 		{
@@ -55,13 +55,35 @@ else // Player not paused
 		{
 		vSpd = clamp(vSpd,-maxRiseSpd,maxFallSpd);
 		}
-	// Collision
-	//Horizontal collisions
 	if (duck) {hSpd /= 1.3}
 	hSpd = hSpd/hSpdResistance;
-	x += hSpd;
+	
+	
 
-	//Snap
+	//Horizontal collisions
+	x += hSpd;
+	//Tile
+	if (hSpd > 0)
+		{
+		var t1 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			x = ((bbox_right & ~31)-1) - sprite_bbox_right;
+			hSpd = 0;
+			}
+		}
+		else
+		{
+		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			x = ((bbox_left + 32) & ~31) - sprite_bbox_left;
+			hSpd = 0;
+			}
+		}
+	//Object
 	if place_meeting(x+sign(hSpd),y,obj_solid) 
 	{
 		var wall = instance_place(x+sign(hSpd),y,obj_solid);
@@ -75,10 +97,32 @@ else // Player not paused
 			}
 		hSpd = 0;
 	}
-	
 	//Vertical collisions
 	y+=vSpd;
-	//Snap
+	//Tile
+	if (vSpd > 0)
+		{
+		var t1 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
+			vSpd = 0;
+			}
+		}
+		else
+		{
+		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
+		if (t1 > 0 || t2 > 0)
+			{
+			y = ((bbox_top + 32) & ~31) - sprite_bbox_top;
+			vSpd = 0;
+			}
+		}
+
+
+	//Object
 	if place_meeting(x,y+sign(vSpd),obj_solid) 
 	{
 		var wall = instance_place(x,y+sign(vSpd),obj_solid);

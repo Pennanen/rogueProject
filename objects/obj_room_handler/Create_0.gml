@@ -2,7 +2,7 @@
 /*
 */
 randomize();
-bottomLine = 1500;
+bottomLine = room_height-10;
 topLine = -1700;
 globalvar FLOOR, DIFFICULTY;
 FLOOR = -1;

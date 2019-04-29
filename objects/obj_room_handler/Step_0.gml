@@ -1,6 +1,8 @@
 /// @description
 /*
 */
+if (room != room_chunkRoom && instance_exists(obj_player))
+{
 var shop = 0//irandom(5);
 if (obj_player.y > bottomLine)
 	{
@@ -16,9 +18,10 @@ if (obj_player.y > bottomLine)
 		if ((FLOOR+1) % 5 = 0 && shop == 0){rm = room4_shop}
 		else
 			{
-				rm = choose(rm_s1_arena,rm_s1_arena_2,rm_s1_stairs,rm_s1_stairs_2);
+				//rm = choose(rm_s1_arena,rm_s1_arena_2,rm_s1_stairs,rm_s1_stairs_2);
+				rm = room_chunkRoom;
 			}
 	changeMusic(msc_between,0.05,0.2);
 	room_goto(rm);
 	}
-	
+}
