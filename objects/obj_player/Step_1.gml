@@ -9,8 +9,8 @@ keyUp = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
 keyDown = keyboard_check(ord("S"));
 
 
-var t1 = tile_meeting(bbox_left,bbox_bottom+3,tilemap) & tile_index_mask;
-var t2 = tile_meeting(bbox_right,bbox_bottom+3,tilemap) & tile_index_mask;
+var t1 = tile_meeting(bbox_left,bbox_bottom+4,global.Tilemap_Wall) & tile_index_mask;
+var t2 = tile_meeting(bbox_right,bbox_bottom+4,global.Tilemap_Wall) & tile_index_mask;
 if (t1 != 0 || t2!=0 || collision_rectangle(x-15,y+15,x+15,y+22,obj_solid,true,0)) {onGround = true}
 else if (onGround != false){onGround = false};
 

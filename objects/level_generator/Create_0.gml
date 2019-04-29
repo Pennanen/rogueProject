@@ -9,15 +9,17 @@ room_set_camera(global.rm,0,obj_camera);
 randomize();
 start = true;
 chunkNumber_horisontal	= 2;
-chunkNumber_vertical	= 1;
+chunkNumber_vertical	= 3;
 
 chunkIndexX = 0;
 chunkIndexY = 0;
 
 acceptedObjects = ds_list_create();
-ds_list_add(acceptedObjects,obj_solid,obj_chest,obj_water,obj_player_spawn,obj_enemy_spawn);
+ds_list_add(acceptedObjects,obj_solid,obj_chest,obj_water,obj_player_spawn,obj_enemy_spawn
+							,obj_door_up,obj_breakable_block
+							);
 levelW = 3;
-levelH = 4;
+levelH = 5;
 
 tileW = 32;
 
@@ -25,8 +27,12 @@ chunkW = 24;
 chunkH = 12;
 
 padding = 32;
+
 chunkData = ds_list_create();
-tileDataGrid = ds_grid_create(tileW*chunkW*levelW,tileW*chunkH*levelH);
+
+tileDataGrid = ds_grid_create(chunkW*levelW,chunkH*levelH);
+ds_grid_clear(tileDataGrid, 0);
+
 index= 0;
 generationIndex = 0;
 var lay_id = layer_get_id("Tiles_1");
@@ -44,10 +50,10 @@ for(aY = 0; aY < levelW; aY++)
 	chunkIndexY = irandom_range(0,chunkNumber_vertical);
 	}
 	// Get instances from that chunk
-	var x1 = 1+padding*(chunkIndexX+1)+chunkIndexX*tileW*chunkW; //64+0
-	var y1 = 1+padding*(chunkIndexY+1)+chunkIndexY*tileW*chunkH;
-	var x2 = -2+padding*(chunkIndexX+1)+(chunkIndexX+1)*tileW*chunkW; //32+512
-	var y2 = -2+padding*(chunkIndexY+1)+(chunkIndexY+1)*tileW*chunkH;
+	var x1 = padding*(chunkIndexX+1)+chunkIndexX*tileW*chunkW; //64+0
+	var y1 = padding*(chunkIndexY+1)+chunkIndexY*tileW*chunkH;
+	var x2 = padding*(chunkIndexX+1)+(chunkIndexX+1)*tileW*chunkW; //32+512
+	var y2 = padding*(chunkIndexY+1)+(chunkIndexY+1)*tileW*chunkH;
 	col = collision_rectangle_list(x1,y1,x2,y2,all,0,true,chunkData,1);
 	// Save Instances to next room
 	for(i=0;i<col;i++)
@@ -65,7 +71,7 @@ for(aY = 0; aY < levelW; aY++)
 			instData[index,3] = xx; // x
 			instData[index,4] = yy; // y
 			index++;
-			}
+		}
 		ds_list_delete(chunkData,0);
 		}
 		ds_list_clear(chunkData);
@@ -76,15 +82,16 @@ for(aY = 0; aY < levelW; aY++)
 		{
 		var x1 = padding*(chunkIndexX+1)+chunkIndexX*tileW*chunkW+1+tileX*tileW;
 		var y1 = padding*(chunkIndexY+1)+chunkIndexY*tileW*chunkH+1+tileY*tileW;
-		
+
+
 		var data = tilemap_get_at_pixel(map_id, x1, y1);
 		// Save tiledata;
 		var relativeX = tileX;
 		var relativeY = tileY;
 		var xx = aX*chunkW+relativeX;
 		var yy = aY*chunkH+relativeY;
-		
-		ds_grid_add(tileDataGrid,xx,yy,data);
+		if (data > 0)tileDataGrid[# xx,yy] = 1;
+		//ds_grid_add(tileDataGrid,xx,yy,data);
 		}
 	}
 	generationIndex++;

@@ -44,8 +44,8 @@ else // Player not paused
 	if (keyUpHold && vSpd < 0 && !onGround){}//normal
 	else if (vSpd < 0 && !onGround){vSpd+=1;}
 	else if (vSpd >= 0 && !onGround){vSpd+=grav/2};
-	if (onGround && keyDown) {duck = true}
-	else if (!tile_meeting(x,y-8,tilemap) && !place_meeting(x,y-8,obj_solid)){duck = false};
+	//if (onGround && keyDown) {duck = true}
+	//else if (!tile_meeting(x,y-9,global.Tilemap_Wall) && !place_meeting(x,y-12,obj_solid)){duck = false};
 	vSpd+=grav;
 	if (inWater)
 		{
@@ -65,8 +65,8 @@ else // Player not paused
 	//Tile
 	if (hSpd > 0)
 		{
-		var t1 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
-		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		var t1 = tile_meeting(bbox_right,bbox_top,global.Tilemap_Wall) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,global.Tilemap_Wall) & tile_index_mask;
 		if (t1 > 0 || t2 > 0)
 			{
 			x = ((bbox_right & ~31)-1) - sprite_bbox_right;
@@ -75,8 +75,8 @@ else // Player not paused
 		}
 		else
 		{
-		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
-		var t2 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
+		var t1 = tile_meeting(bbox_left,bbox_top,global.Tilemap_Wall) & tile_index_mask;
+		var t2 = tile_meeting(bbox_left,bbox_bottom,global.Tilemap_Wall) & tile_index_mask;
 		if (t1 > 0 || t2 > 0)
 			{
 			x = ((bbox_left + 32) & ~31) - sprite_bbox_left;
@@ -102,8 +102,8 @@ else // Player not paused
 	//Tile
 	if (vSpd > 0)
 		{
-		var t1 = tile_meeting(bbox_left,bbox_bottom,tilemap) & tile_index_mask;
-		var t2 = tile_meeting(bbox_right,bbox_bottom,tilemap) & tile_index_mask;
+		var t1 = tile_meeting(bbox_left,bbox_bottom,global.Tilemap_Wall) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_bottom,global.Tilemap_Wall) & tile_index_mask;
 		if (t1 > 0 || t2 > 0)
 			{
 			y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
@@ -112,8 +112,8 @@ else // Player not paused
 		}
 		else
 		{
-		var t1 = tile_meeting(bbox_left,bbox_top,tilemap) & tile_index_mask;
-		var t2 = tile_meeting(bbox_right,bbox_top,tilemap) & tile_index_mask;
+		var t1 = tile_meeting(bbox_left,bbox_top,global.Tilemap_Wall) & tile_index_mask;
+		var t2 = tile_meeting(bbox_right,bbox_top,global.Tilemap_Wall) & tile_index_mask;
 		if (t1 > 0 || t2 > 0)
 			{
 			y = ((bbox_top + 32) & ~31) - sprite_bbox_top;

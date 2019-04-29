@@ -1,8 +1,8 @@
 /// @description
 /*
 */
-lay_id = layer_get_id("Tiles_1");
-tilemap = layer_tilemap_get_id(lay_id);
+
+tilemap = global.Tilemap_Wall;
 spd = 16+bulletSPEED*3;
 dir = 0;
 lastDir = 0;

@@ -1,9 +1,6 @@
 /// @description
 /*
 */
-lay_id = layer_get_id("Tiles_1");
-tilemap = layer_tilemap_get_id(lay_id);
-
 colList = ds_list_create();
 grav = 0.7;
 inWater =false;

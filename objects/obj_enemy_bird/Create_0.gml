@@ -1,8 +1,8 @@
 /// @description
 /*
 */
-lay_id = layer_get_id("Tiles_1");
-tilemap = layer_tilemap_get_id(lay_id);
+tilemap = global.Tilemap_Wall;
+inWater = false;
 pause = false;
 maxHp = 3+DIFFICULTY*1.1;
 hp = maxHp;

@@ -1,8 +1,8 @@
 /// @description
 /*
 */
-lay_id = layer_get_id("Tiles_1");
-tilemap = layer_tilemap_get_id(lay_id);
+tilemap = global.Tilemap_Wall;
+inWater = false;
 pause = false;
 maxHp = 4+DIFFICULTY;
 hp = maxHp;
@@ -16,8 +16,10 @@ hAcc = 0.18;
 canImpale = true;
 spinDir = 0;
 mass = 1.24;
+
 spriteIndex = spr_spinner;
 imageIndex = 0;
+
 onGround = false;
 
 damage = 0.5;
