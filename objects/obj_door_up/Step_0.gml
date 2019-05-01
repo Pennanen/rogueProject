@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-if (obj_player.y > 64){open = -1}
+if (obj_player.y > y+10){open = -1}
 openX = startx-sprite_width;
 if (open = 1)
 	{

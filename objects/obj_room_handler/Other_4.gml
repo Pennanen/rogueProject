@@ -1,7 +1,7 @@
 /// @description
 /*
 */
-bottomLine = room_height-10;
+bottomLine = room_height+10;
 if (layer_exists(layer_get_id("Tiles_1")))global.Tilemap_Wall = layer_tilemap_get_id(layer_get_id("Tiles_1"));
 if (room != room_chunkRoom && instance_exists(obj_player))
 {
@@ -9,8 +9,8 @@ FLOOR++;
 if (room != room_start)
 	{
 	//obj_player.y = topLine;
-	if (!fork){obj_player.playerPause = true;alarm[0] = 15;}
-	else {fork = false;}
+	//if (!fork){obj_player.playerPause = true;alarm[0] = 15;}
+	//else {fork = false;}
 	setCamPos(obj_camera.targetx,obj_player.y);
 	}
 	else

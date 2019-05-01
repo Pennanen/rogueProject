@@ -14,10 +14,12 @@ if (hover)
 	
 	image_xscale = scale;
 	image_yscale = scale;
+	/*
+if (instance_exists(obj_item_handler)){
 x1 = obj_item_handler.slot[0].x-40;
 y1 = obj_item_handler.slot[0].y-20;
 x2 = obj_item_handler.slot[3].x+40;
-y2 = obj_item_handler.slot[3].y+40;
+y2 = obj_item_handler.slot[3].y+40;}
 if (instance_exists(obj_player))
 {
 if (mouse_x > x1 && mouse_x < x2 && mouse_y > y1 && mouse_y < y2 || obj_player.y < 0 || obj_player.y > room_height || instance_position(mouse_x,mouse_y,obj_slot))
@@ -29,7 +31,7 @@ if (mouse_x > x1 && mouse_x < x2 && mouse_y > y1 && mouse_y < y2 || obj_player.y
 	{
 	disabled = false;
 	}
-}
+}*/
 if (!disabled && keyIndex != -1)
 {
 if (instance_exists(item) && item.canHold)

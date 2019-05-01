@@ -2,7 +2,7 @@
 /*
 */
 randomize();
-bottomLine = room_height-10;
+bottomLine = room_height+10;
 global.Tilemap_Wall = layer_tilemap_get_id(layer_get_id("Tiles_1"));
 globalvar FLOOR, DIFFICULTY;
 FLOOR = -1;

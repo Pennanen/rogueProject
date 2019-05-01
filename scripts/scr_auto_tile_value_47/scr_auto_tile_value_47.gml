@@ -16,46 +16,46 @@ var bit = 0;
 
 //Basically, below checks to see all cells around targeted cell.
 //Looking first if it's not 'out of bounds' then see if value matches for auto-wall.
-if(scr_on_grid(grid, xx-1, yy-1) && grid[# xx-1, yy-1] == val)//up_left
+if(scr_on_grid(grid, xx-1, yy-1) && grid[# xx-1, yy-1] == val || yy = 0 || xx = 0)//up_left
 {
-	if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val && scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val)
+	if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val && scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val || yy = 0 || xx = 0)
 	{
 	bit = bit | 1;
 	}
 }
-if(scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val)//up
+if(scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val || yy = 0)//up
 {
 bit = bit | 2;
 }
-if(scr_on_grid(grid, xx+1, yy-1) && grid[# xx+1, yy-1] == val)//up_right
+if(scr_on_grid(grid, xx+1, yy-1) && grid[# xx+1, yy-1] == val || yy = 0 || xx = gw-1)//up_right
 {
-	if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val && scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val)
+	if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val && scr_on_grid(grid, xx, yy-1) && grid[# xx, yy-1] == val || yy = 0 || xx = gw-1)
 	{
 	bit = bit | 4;
 	}
 }
-if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val)//left
+if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val || xx = 0)//left
 {
 bit = bit | 8;
 }
-if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val)//right
+if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val || xx = gw-1)//right
 {
 bit = bit | 16;
 }
-if(scr_on_grid(grid, xx-1, yy+1) && grid[# xx-1, yy+1] == val)//down_left
+if(scr_on_grid(grid, xx-1, yy+1) && grid[# xx-1, yy+1] == val || xx = 0 || yy = gh-1)//down_left
 {
-	if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val && scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val)
+	if(scr_on_grid(grid, xx-1, yy) && grid[# xx-1, yy] == val && scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val || xx = 0 || yy = gh-1 )
 	{
 	bit = bit | 32;
 	}
 }
-if(scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val)//down
+if(scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val || yy = gh-1)//down
 {
 bit = bit | 64;
 }
-if(scr_on_grid(grid, xx+1, yy+1) && grid[# xx+1, yy+1] == val)//down_right
+if(scr_on_grid(grid, xx+1, yy+1) && grid[# xx+1, yy+1] == val || yy = gh-1 || xx = gw-1)//down_right
 {
-	if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val && scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val)
+	if(scr_on_grid(grid, xx+1, yy) && grid[# xx+1, yy] == val && scr_on_grid(grid, xx, yy+1) && grid[# xx, yy+1] == val|| yy = gh-1 || xx = gw-1)
 	{
 	bit = bit | 128;
 	}

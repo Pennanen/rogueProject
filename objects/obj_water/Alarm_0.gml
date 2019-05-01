@@ -1,6 +1,7 @@
 /// @description
 /*
 */
+x--;
 x1 = x;
 x2 = x+sprite_width;
 y1 = y;
